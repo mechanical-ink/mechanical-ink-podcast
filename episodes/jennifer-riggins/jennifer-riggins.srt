@@ -1,0 +1,3100 @@
+1
+00:00:00,000 --> 00:00:07,000
+Welcome to the Mechanical Inc podcast, a collection of conversations about the open-source ecosystem.
+
+2
+00:00:07,000 --> 00:00:17,000
+We speak with containers and companies that play a key role in ensuring the health and sustainability of open-source today and in the future.
+
+3
+00:00:17,000 --> 00:00:24,000
+Hey Jennifer, thanks for joining me on the Mechanical Inc podcast.
+
+4
+00:00:24,000 --> 00:00:29,000
+So how are you today? How has life treating you?
+
+5
+00:00:29,000 --> 00:00:35,160
+I mean, it's Friday, so it should be a relaxing moment, but usually it's a, okay, you've got to get
+
+6
+00:00:35,160 --> 00:00:38,040
+shit done for the rest of the week moment, but that's going to have to be here.
+
+7
+00:00:38,040 --> 00:00:47,400
+Yeah, yeah, same here. So I learned about you through a colleague at a client I work with
+
+8
+00:00:47,400 --> 00:00:56,360
+Mazzala and specifically the Indian WebDocs team. She's called Ruth John. She kind of knows you
+
+9
+00:00:56,360 --> 00:01:00,600
+from my dad understand. Maybe she knows of your work. Maybe she doesn't know you personally,
+
+10
+00:01:00,600 --> 00:01:06,120
+but she shared an article you wrote about what the fuck is wrong with open source communities.
+
+11
+00:01:06,120 --> 00:01:14,200
+That's a good read. Let me read that. The funny thing is it's interesting to me from a different
+
+12
+00:01:14,200 --> 00:01:18,120
+perspective. It's a different couple of perspectives. So let me lay those off on the table. So
+
+13
+00:01:20,920 --> 00:01:28,600
+I run a company called Mechanical Inc. It's been a company for a long time just as a way from
+
+14
+00:01:28,600 --> 00:01:38,600
+me to work with international clients. But I didn't really have a, I don't really think about what
+
+15
+00:01:38,600 --> 00:01:45,720
+I wanted to do with it. But over the years I started feeling more and more like maybe I should do
+
+16
+00:01:45,720 --> 00:01:49,880
+something with this instead of just, you know, working for somebody maybe there's something useful
+
+17
+00:01:49,880 --> 00:01:57,040
+like and do because for me, I want the work that I do to be meaningful and impactful as
+
+18
+00:01:57,040 --> 00:01:58,920
+much as possible.
+
+19
+00:01:58,920 --> 00:02:04,560
+And so I try to find people and clients that I can work with that has a mission that I
+
+20
+00:02:04,560 --> 00:02:05,560
+can believe in.
+
+21
+00:02:05,560 --> 00:02:11,240
+And that's one of the reasons I started contracting with Mozilla way back in the day.
+
+22
+00:02:11,240 --> 00:02:17,480
+But in the last year, I found what I wanted to do with Mechanical Inc.
+
+23
+00:02:17,480 --> 00:02:24,800
+And that is for it to be an open source company that focuses on the open social ecosystem,
+
+24
+00:02:24,800 --> 00:02:27,000
+but then also a civic and ethical tech.
+
+25
+00:02:27,000 --> 00:02:35,960
+Because I think we're in an inflection point when it comes to tech in general.
+
+26
+00:02:35,960 --> 00:02:40,560
+Some of it is painful for a lot of people, some of it is necessary evil.
+
+27
+00:02:40,560 --> 00:02:47,800
+And some things have just been let go without too much constraint being put on it.
+
+28
+00:02:47,800 --> 00:02:53,480
+And so yeah, I don't want to do another agency building websites for other people.
+
+29
+00:02:53,480 --> 00:02:54,640
+What I do meaningful work.
+
+30
+00:02:54,640 --> 00:03:00,960
+But then on the mesilocyte, I was part of the MDN WebDogs project, which is a massive
+
+31
+00:03:00,960 --> 00:03:04,360
+open source project.
+
+32
+00:03:04,360 --> 00:03:08,680
+And I love what it stands for and what it does and the opportunities for people to learn
+
+33
+00:03:08,680 --> 00:03:14,520
+how to make websites in a way that's easily accessible, that's free and all that kind of stuff,
+
+34
+00:03:14,520 --> 00:03:22,360
+and be able to contribute back to it. And so in April this year, I smit from being the
+
+35
+00:03:22,360 --> 00:03:30,840
+front-end engineer on the project to being the community manager for WebDocs. And that is where
+
+36
+00:03:30,840 --> 00:03:37,560
+I started digging into the community aspects more and more and more. I kind of always did it,
+
+37
+00:03:37,560 --> 00:03:41,960
+than that's why I was the natural choice and we started looking for somebody.
+
+38
+00:03:41,960 --> 00:03:48,280
+But now having done it for a while I've been digging into all the things and I've
+
+39
+00:03:48,280 --> 00:03:52,600
+realized some of these problems that I wasn't entirely aware of. Some of them are wise,
+
+40
+00:03:52,600 --> 00:03:58,840
+some of them are wise. So that is why that article was very
+
+41
+00:03:58,840 --> 00:04:03,160
+well-timed for me because I was starting to feel that
+
+42
+00:04:03,160 --> 00:04:09,880
+WTF feelings and so when that came across by path I was like this is the perfect
+
+43
+00:04:09,880 --> 00:04:16,200
+combination of things. Me finding my way with the company, what I do in Mozilla and this article
+
+44
+00:04:16,200 --> 00:04:22,680
+you've written and I was like I have to speak to you. So that is a very long way, I'll tell you how
+
+45
+00:04:22,680 --> 00:04:32,040
+we got to today. So I think with all of that said I'm going to shut up and then I'm going to...
+
+46
+00:04:32,040 --> 00:04:34,040
+Well, I have a question for you.
+
+47
+00:04:34,040 --> 00:04:35,040
+Shoot.
+
+48
+00:04:35,040 --> 00:04:39,840
+Because you said something that is a bit contradictory,
+
+49
+00:04:39,840 --> 00:04:41,240
+or maybe as an oxymoron.
+
+50
+00:04:41,240 --> 00:04:42,240
+OK.
+
+51
+00:04:42,240 --> 00:04:45,840
+You said you wanted to be an open source company.
+
+52
+00:04:45,840 --> 00:04:48,240
+What do you think that is?
+
+53
+00:04:48,240 --> 00:04:50,040
+And what does that mean?
+
+54
+00:04:50,040 --> 00:04:53,640
+So it's a combination of things for me personally.
+
+55
+00:04:53,640 --> 00:04:57,440
+So other than being an open source company,
+
+56
+00:04:57,440 --> 00:04:59,840
+it's also a open startup.
+
+57
+00:04:59,840 --> 00:05:03,440
+So that means everything we do is transparent.
+
+58
+00:05:03,440 --> 00:05:06,960
+That includes salaries, that includes our expenses,
+
+59
+00:05:06,960 --> 00:05:10,240
+that includes any income, regenerate profits we make.
+
+60
+00:05:10,240 --> 00:05:15,920
+All of that I'm busy. So for the longest time, the company also did no website.
+
+61
+00:05:15,920 --> 00:05:19,920
+It does have a website now and I'm currently working on the /Open page,
+
+62
+00:05:19,920 --> 00:05:24,560
+which is where you share all these statistics. And that includes
+
+63
+00:05:26,960 --> 00:05:32,880
+Harby approach hiring, for example. I hate this idea that because you live in India,
+
+64
+00:05:32,880 --> 00:05:38,000
+you get paid a quarter of the salary of some of you who lives in the Bay Area.
+
+65
+00:05:38,000 --> 00:05:44,640
+And I know it's, there's a happy middle ground you need to find.
+
+66
+00:05:44,640 --> 00:05:49,960
+Because, you know, as a company that runs in South Africa, I also only have the
+
+67
+00:05:49,960 --> 00:05:55,040
+monetary capabilities that I have as a company in Africa.
+
+68
+00:05:55,480 --> 00:05:59,400
+But I don't want to use those salary scales.
+
+69
+00:05:59,400 --> 00:06:03,600
+Like when I employ, I want to employ with what's fair for the work you do,
+
+70
+00:06:03,600 --> 00:06:04,600
+not where you live.
+
+71
+00:06:04,600 --> 00:06:06,400
+So that plays into it.
+
+72
+00:06:06,400 --> 00:06:09,240
+So you're an ethical company.
+
+73
+00:06:09,240 --> 00:06:10,960
+You're a transparent company.
+
+74
+00:06:10,960 --> 00:06:13,920
+I don't think you are in an open source company.
+
+75
+00:06:13,920 --> 00:06:16,440
+You are an open company.
+
+76
+00:06:16,440 --> 00:06:17,560
+You're a transparent ethical.
+
+77
+00:06:17,560 --> 00:06:18,880
+These are all great things.
+
+78
+00:06:18,880 --> 00:06:24,960
+I would say as an intro to those that maybe are less familiar with open source
+
+79
+00:06:24,960 --> 00:06:27,120
+or haven't thought of it as a business,
+
+80
+00:06:27,120 --> 00:06:29,920
+open source is not a business model.
+
+81
+00:06:29,920 --> 00:06:34,160
+Because open source inherently, you are licensed,
+
+82
+00:06:34,160 --> 00:06:36,360
+open source is a community,
+
+83
+00:06:36,360 --> 00:06:39,400
+but it is hard is the open source software,
+
+84
+00:06:39,400 --> 00:06:42,560
+which means, or can be open license,
+
+85
+00:06:42,560 --> 00:06:44,040
+creative comments, images,
+
+86
+00:06:44,040 --> 00:06:46,960
+any creative work that creative workers are doing.
+
+87
+00:06:46,960 --> 00:06:51,440
+And, but you are, if you're doing a true open source license,
+
+88
+00:06:51,440 --> 00:06:54,360
+not some MongoDB stuff, things like that,
+
+89
+00:06:54,360 --> 00:07:01,980
+You are saying that anyone can use your code, including to profit off of, including for
+
+90
+00:07:01,980 --> 00:07:09,740
+unethical reasons, including to build a website that spreads hate speech, things like that.
+
+91
+00:07:09,740 --> 00:07:12,340
+So I'm arguing you are not open source company.
+
+92
+00:07:12,340 --> 00:07:18,020
+You are a company that maybe utilizes open source tools, participates in open source
+
+93
+00:07:18,020 --> 00:07:26,900
+communities, maybe consults open source communities. And you strive to be transparent and ethical,
+
+94
+00:07:26,900 --> 00:07:32,740
+but I would say, and this is the problem with open source. So open source as a whole,
+
+95
+00:07:32,740 --> 00:07:38,260
+and it's interesting because this isn't something I discussed in that article, but then someone
+
+96
+00:07:38,260 --> 00:07:43,540
+brilliantly responded to my article in a comment and discussed it. And this is very true.
+
+97
+00:07:43,540 --> 00:07:49,780
+Open source is a great thing in some ways, but is inherently flawed, which leads to inherent
+
+98
+00:07:49,780 --> 00:07:56,580
+huge problems with diversity, equity, and inclusion, belonging, as it were, because it is based
+
+99
+00:07:56,580 --> 00:08:02,660
+on voluntary work. And who already does more than three-quarters of the voluntary care work in the
+
+100
+00:08:02,660 --> 00:08:10,020
+world, women, and people of color, etc. As you grow into the intersectionalism, these are more marginalized
+
+101
+00:08:10,020 --> 00:08:16,580
+people, people marginalized by tech, not by themselves tech is marginalizing them. So what's happening is
+
+102
+00:08:16,580 --> 00:08:24,660
+tech as a whole somewhere in between 20 and there are many problems with diversity and tech. It's
+
+103
+00:08:24,660 --> 00:08:30,900
+easiest to talk along the binary because that is typically what most companies and specifically open
+
+104
+00:08:30,900 --> 00:08:36,740
+source companies and open source surveys are targeting. Typically they can do they're doing
+
+105
+00:08:38,180 --> 00:08:46,260
+the binary and where people are. So that means tech in general we're talking about
+
+106
+00:08:46,260 --> 00:08:55,140
+20 to 23, 24 percent women. And that's across the board at least for graduating from Qtor Science
+
+107
+00:08:55,140 --> 00:09:02,660
+degree. When you talk about open stores, yes, the Google Summer of Code and all these fantastic
+
+108
+00:09:02,660 --> 00:09:07,380
+programs that are these internships that are really positive, maybe are about that. Maybe
+
+109
+00:09:07,380 --> 00:09:15,780
+do have like a 23% women participants. But as you go along, you have, I'm trying to remember
+
+110
+00:09:15,780 --> 00:09:22,020
+my friend Bianca, my friend in the world of tech called it a I'm going to look it up because it's
+
+111
+00:09:22,020 --> 00:09:27,380
+a word I hadn't heard before, but she I think coined Bianca Trinkenreich coined the term.
+
+112
+00:09:27,380 --> 00:09:37,140
+It's right there. I will find it. But basically people leak. So we're we're ending up with maybe
+
+113
+00:09:37,140 --> 00:09:45,060
+be three to 4% women and non-binary people contributing to the tech community.
+
+114
+00:09:45,060 --> 00:09:50,580
+Now, the New Linux Foundation Survey of Diversity Acquing Inclusion last year was up there
+
+115
+00:09:50,580 --> 00:09:54,220
+at like 14%, which is mind-boggling compared to any other surveys.
+
+116
+00:09:54,220 --> 00:09:59,460
+So I really need to dive into their statistics and everything.
+
+117
+00:09:59,460 --> 00:10:04,740
+But there's a leak and it doesn't just usually, when it's in open source, it doesn't
+
+118
+00:10:04,740 --> 00:10:08,240
+usually just affects the individual open source community.
+
+119
+00:10:08,240 --> 00:10:13,020
+It affects the whole open source community
+
+120
+00:10:13,020 --> 00:10:15,220
+'cause people are less likely to,
+
+121
+00:10:15,220 --> 00:10:18,360
+if, and then it affects the tech community
+
+122
+00:10:18,360 --> 00:10:20,200
+because women are much more likely
+
+123
+00:10:20,200 --> 00:10:21,460
+and people might not be sure
+
+124
+00:10:21,460 --> 00:10:25,860
+are eyes by tech and the world are more likely to quit tech.
+
+125
+00:10:25,860 --> 00:10:27,860
+So they invest in all that time and energy
+
+126
+00:10:27,860 --> 00:10:29,640
+learning with this girls set and then they quit
+
+127
+00:10:29,640 --> 00:10:31,940
+because they feel ostracized and stuff.
+
+128
+00:10:31,940 --> 00:10:35,940
+So that's a long way around to say,
+
+129
+00:10:35,940 --> 00:10:38,060
+I think you can have a resource mindset.
+
+130
+00:10:38,060 --> 00:10:40,540
+You can have an open mindset, you can return to transparency,
+
+131
+00:10:40,540 --> 00:10:42,580
+but I don't think you are technically an open source company
+
+132
+00:10:42,580 --> 00:10:45,740
+because open source is still defined inherently
+
+133
+00:10:45,740 --> 00:10:47,100
+in that license.
+
+134
+00:10:47,100 --> 00:10:52,060
+So if everything you're doing was licensed under MIT license
+
+135
+00:10:52,060 --> 00:10:54,780
+or one of these licenses, it could be.
+
+136
+00:10:54,780 --> 00:10:57,260
+And there's such a thing as an open source mindset
+
+137
+00:10:57,260 --> 00:10:59,060
+for better, for worse, things like that.
+
+138
+00:10:59,060 --> 00:11:04,020
+that there inherently can't really be a business
+
+139
+00:11:04,020 --> 00:11:05,820
+around open source.
+
+140
+00:11:05,820 --> 00:11:09,700
+You can build a business, an abstraction layer on top
+
+141
+00:11:09,700 --> 00:11:11,380
+of open source because open source
+
+142
+00:11:11,380 --> 00:11:13,780
+is inherently more complex code.
+
+143
+00:11:13,780 --> 00:11:16,740
+And you can find a way to make it simpler
+
+144
+00:11:16,740 --> 00:11:18,220
+and provide a service.
+
+145
+00:11:18,220 --> 00:11:20,860
+But you're not open source then,
+
+146
+00:11:20,860 --> 00:11:24,020
+you're proprietary on top of open source things like that.
+
+147
+00:11:24,020 --> 00:11:25,660
+Now it's a tricky thing.
+
+148
+00:11:25,660 --> 00:11:28,780
+So open source is a very odd duck.
+
+149
+00:11:28,780 --> 00:11:34,860
+And because it still relies on volunteer work ends
+
+150
+00:11:34,860 --> 00:11:40,380
+or companies that the larger projects are sponsoring it
+
+151
+00:11:40,380 --> 00:11:44,460
+and then paying their developers, their engineers,
+
+152
+00:11:44,460 --> 00:11:48,620
+their even marketers, community management people
+
+153
+00:11:48,620 --> 00:11:53,140
+as their day job to contribute to it is the other way
+
+154
+00:11:53,140 --> 00:11:56,140
+And then we know the largest companies in tech
+
+155
+00:11:56,140 --> 00:11:57,740
+and in the world also have diversity,
+
+156
+00:11:57,740 --> 00:11:58,820
+equity inclusion problems.
+
+157
+00:11:58,820 --> 00:12:00,700
+So it's a full cycle.
+
+158
+00:12:00,700 --> 00:12:04,060
+So those are the two ways most people are coming across.
+
+159
+00:12:04,060 --> 00:12:09,060
+So like in 2020, there was a huge up increase
+
+160
+00:12:09,060 --> 00:12:13,140
+and it's wonderful in that way of people contributing
+
+161
+00:12:13,140 --> 00:12:17,140
+to open source because they were bored.
+
+162
+00:12:17,140 --> 00:12:17,900
+(laughing)
+
+163
+00:12:17,900 --> 00:12:21,380
+And that's a great way to, and there was a downturn
+
+164
+00:12:21,380 --> 00:12:24,500
+the economies of some people who are losing jobs, but they're also, they had all this time
+
+165
+00:12:24,500 --> 00:12:30,020
+on their hands to make bread and to contribute to open source. It's a great way to get
+
+166
+00:12:30,020 --> 00:12:37,740
+example of work and to contribute to a community and get a network. So you get proof of work
+
+167
+00:12:37,740 --> 00:12:45,700
+and you have a network. But who whose lives got harder when schools were closed? Full
+
+168
+00:12:45,700 --> 00:12:52,420
+circle again. I'm sure if we look at the statistics. Parents but mostly women
+
+169
+00:12:52,420 --> 00:12:58,180
+were not able to contribute more. People of color who are more likely to be
+
+170
+00:12:58,180 --> 00:13:02,860
+taken care of older or disabled relatives, statistically much more likely to
+
+171
+00:13:02,860 --> 00:13:07,860
+be living in intergenerational households. Not able to. Those that can't afford to
+
+172
+00:13:07,860 --> 00:13:11,380
+have internet when they're working from home or don't have a place that they
+
+173
+00:13:11,380 --> 00:13:30,380
+can have background because member of virtual backgrounds didn't work for black people for months on zoom because they would just be head them. So there was just a whole cycle of different problems with that so open sources of reflection of problems of society.
+
+174
+00:13:30,380 --> 00:13:39,380
+It can be a great thing, but it can also be a mess because you can have hundreds of thousands of people in a community and it can tend to be.
+
+175
+00:13:40,380 --> 00:13:53,260
+more of the free fraud. Yeah, yeah. So, okay, that's interesting. So, you cannot truly be an
+
+176
+00:13:53,260 --> 00:13:59,660
+open-source business because if that's the case then you need to be kind of like a nonprofit,
+
+177
+00:13:59,660 --> 00:14:07,100
+right? That's the only feasible way of being a truly open-source company. If you are not,
+
+178
+00:14:07,900 --> 00:14:11,020
+So your code is all freely available.
+
+179
+00:14:11,020 --> 00:14:19,180
+And then you stack ethics on top of that to, in an attempt, to try and prevent people from using
+
+180
+00:14:19,180 --> 00:14:28,940
+your software for nefarious purposes. There is a new license coming about, about that,
+
+181
+00:14:28,940 --> 00:14:34,700
+an ethical use license, because I think that is the only fair situation. And that's happened
+
+182
+00:14:34,700 --> 00:14:41,740
+Google like they had walkouts and all but they're AI there a lot of Google is open source a lot I
+
+183
+00:14:41,740 --> 00:14:49,660
+Android Kubernetes these all came out of there but they were getting contracts with the US government
+
+184
+00:14:49,660 --> 00:14:58,140
+guess US government spends money on tech with only really on defense the rest of it is pretty
+
+185
+00:14:58,140 --> 00:15:14,140
+So, and people walked out and things. So that is something that's happening with like open source tooling WordPress WordPress is a business that provides templates and things but it is also an open source company.
+
+186
+00:15:14,140 --> 00:15:23,140
+or not company. It's an open source product. It is a company that is the main sponsor of an open source product.
+
+187
+00:15:23,140 --> 00:15:27,140
+And it sells things, but you can also get a WordPress site for free.
+
+188
+00:15:27,140 --> 00:15:33,140
+It does definitely have less value for an SEO perspective and things like that.
+
+189
+00:15:33,140 --> 00:15:40,140
+For speed things like that, but you can still do it. Anyone can spin one up, can fork it.
+
+190
+00:15:40,140 --> 00:15:43,740
+But yeah, that's how that works.
+
+191
+00:15:43,740 --> 00:15:47,140
+You, but they still can't restrict.
+
+192
+00:15:47,140 --> 00:15:50,740
+What you use it for as the free use case.
+
+193
+00:15:50,740 --> 00:15:55,040
+If someone used it to build an anti trans troll farm.
+
+194
+00:15:55,040 --> 00:15:57,340
+They can't restrict that use.
+
+195
+00:15:57,340 --> 00:16:00,340
+There are other ways people can put pressure on different things,
+
+196
+00:16:00,340 --> 00:16:01,940
+but.
+
+197
+00:16:01,940 --> 00:16:04,740
+That they can't and still be considered open source,
+
+198
+00:16:04,740 --> 00:16:07,840
+but there is talk of a new ethical open source license.
+
+199
+00:16:07,840 --> 00:16:11,840
+I don't know where that is. I'm very excited for it because I think that is a problem.
+
+200
+00:16:11,840 --> 00:16:15,120
+Yeah, and I mean, too, that sounds really good. I would like to support that.
+
+201
+00:16:15,120 --> 00:16:21,520
+I'll definitely do some research and try and find one information about it.
+
+202
+00:16:21,520 --> 00:16:28,240
+So how would you rephrase the, I don't know, how you would call yourself? So if you would say,
+
+203
+00:16:28,240 --> 00:16:32,800
+like, I'm an open source company that's also into ethical and civic tech. I was like, oh,
+
+204
+00:16:32,800 --> 00:16:36,800
+but an open source company, it's not quite accurate. How would you rephrase that?
+
+205
+00:16:37,360 --> 00:16:45,360
+open source friendly. I mean everything we bold is open source and you can use it for whatever
+
+206
+00:16:45,360 --> 00:16:50,640
+nefarious reasons but we would like you not to do that but of course we can restrict you from
+
+207
+00:16:50,640 --> 00:16:58,640
+doing that. Currently at least hopefully this licensing as a way of enabling us to do that,
+
+208
+00:16:58,640 --> 00:17:04,400
+it's going to be hard, it's going to be legal, legal easy, it's going to have to play a role there
+
+209
+00:17:04,400 --> 00:17:11,280
+and that's expensive. Also participating in creating the code. That's another thing who is seeing
+
+210
+00:17:11,280 --> 00:17:16,560
+the roadmap. This is what comes up. MongoDB, I'm not trying to be harsh on them. I'm not a data
+
+211
+00:17:16,560 --> 00:17:22,560
+scientist. I don't, I've never even forked anything. So I'm not, I don't tack, I write about tack,
+
+212
+00:17:22,560 --> 00:17:28,160
+but they're always the example. They created their own air quotes, open source license.
+
+213
+00:17:29,760 --> 00:17:38,480
+From other reasons than anything else, like outside pull requests do not get accepted. They
+
+214
+00:17:38,480 --> 00:17:45,760
+keep everything locking key. It's like at least 98% of the code is written with by staffers for MongoDB.
+
+215
+00:17:45,760 --> 00:17:55,760
+They don't publish a roadmap. So when updates come out, it's kind of like, oh wow, look,
+
+216
+00:17:55,760 --> 00:18:02,800
+which has happened. No one knew it was coming, things like that. But they are a successful business.
+
+217
+00:18:02,800 --> 00:18:11,280
+They are publicly traded. Like they do have the ability to... I don't... they can't be under
+
+218
+00:18:11,280 --> 00:18:16,080
+open source and I have not read their license details to understand, but maybe they... under
+
+219
+00:18:16,080 --> 00:18:21,600
+their license could stop because of use of summaries and they tried to... yeah, but there are still
+
+220
+00:18:21,600 --> 00:18:28,400
+companies like Perkona building on top of it to try to abstract complexity and things and they
+
+221
+00:18:28,400 --> 00:18:36,480
+then market themselves as this alternative and the ethical open source. So it's spinning something.
+
+222
+00:18:36,480 --> 00:18:43,280
+But I mean, you can be have open source in your mindset and all. I just don't think you're
+
+223
+00:18:43,280 --> 00:18:49,200
+a company or an open source business. Open source is a mindset and especially it's a community.
+
+224
+00:18:50,240 --> 00:19:00,240
+So you and on the other hand, there are tons of proprietary software that have created wonderful communities as well.
+
+225
+00:19:00,240 --> 00:19:18,240
+And Slack is a great use for all of those Slack works, whether you're a little company, you're a bunch of, you're trying to crowdsource even though you're not open source, you're trying to crowdsource technical support or support or you're trying to build this whole enriched community around open source.
+
+226
+00:19:18,240 --> 00:19:19,240
+Yeah.
+
+227
+00:19:19,240 --> 00:19:20,240
+I know.
+
+228
+00:19:20,240 --> 00:19:21,240
+Yeah.
+
+229
+00:19:21,240 --> 00:19:22,240
+So interesting.
+
+230
+00:19:22,240 --> 00:19:25,320
+So yeah, I think one of the example examples of that
+
+231
+00:19:25,320 --> 00:19:32,560
+nefarious use is what happened with audacity.
+
+232
+00:19:32,560 --> 00:19:37,320
+So audacity is open source.
+
+233
+00:19:37,320 --> 00:19:41,160
+It's probably was the most popular open source audio
+
+234
+00:19:41,160 --> 00:19:42,720
+editing tool.
+
+235
+00:19:42,720 --> 00:19:47,160
+And then it was purchased by another company
+
+236
+00:19:47,160 --> 00:19:49,960
+and injected full of spyware more wear.
+
+237
+00:19:49,960 --> 00:19:55,120
+And your data ended up being sent back to headquarters
+
+238
+00:19:55,120 --> 00:19:57,040
+located in Russia.
+
+239
+00:19:57,040 --> 00:20:02,040
+And so, but thankfully there was a moment in time
+
+240
+00:20:02,040 --> 00:20:06,520
+where people could forget before that change happened.
+
+241
+00:20:06,520 --> 00:20:13,720
+And there's one or two variants now of audacity around.
+
+242
+00:20:15,120 --> 00:20:20,120
+But of course, somehow, I don't know,
+
+243
+00:20:20,120 --> 00:20:23,260
+some other community that was involved with Odacity
+
+244
+00:20:23,260 --> 00:20:26,920
+just left instead of moving to these new forks,
+
+245
+00:20:26,920 --> 00:20:28,720
+which is interesting,
+
+246
+00:20:28,720 --> 00:20:30,160
+'cause David's also talked a while ago
+
+247
+00:20:30,160 --> 00:20:31,520
+about forking WordPress.
+
+248
+00:20:31,520 --> 00:20:32,680
+I don't know if that ever happened,
+
+249
+00:20:32,680 --> 00:20:36,640
+but this was like during the Grittenberg stage,
+
+250
+00:20:36,640 --> 00:20:39,520
+where I was switching everything to Grittenberg
+
+251
+00:20:39,520 --> 00:20:42,160
+and like the accessibility of WordPress's admin
+
+252
+00:20:42,160 --> 00:20:48,160
+stuff degraded quite a bit and then there was this thing but I think people in
+
+253
+00:20:48,160 --> 00:20:55,200
+learnt that there's an an error problem in forking WordPress in that you by doing that you
+
+254
+00:20:55,200 --> 00:21:06,320
+you also inherit all the technical debt. I heard that from the the due to bulk ghost which is
+
+255
+00:21:06,320 --> 00:21:11,920
+also an open source project that a company is built on top of which is kind of like a blogging
+
+256
+00:21:11,920 --> 00:21:17,520
+platform it started or focused on journalists journalism but now it's more a way of
+
+257
+00:21:17,520 --> 00:21:24,080
+generally just being able to make money from your own content. You can host yourself, you can
+
+258
+00:21:24,080 --> 00:21:29,200
+host it on their cloud servers, they have like striped integration all that kind of stuff. I have
+
+259
+00:21:29,200 --> 00:21:33,040
+an issue with the striped integration which we can maybe dig into a little bit because it
+
+260
+00:21:33,040 --> 00:21:41,280
+it plays into the exclusionary nature of some of these things but they so the person who started
+
+261
+00:21:41,280 --> 00:21:52,160
+ghost. He was the lead UX person at WordPress. And so he's first inclination when he got
+
+262
+00:21:52,160 --> 00:21:58,320
+the idea for ghost was to fork WordPress. But then that same thing came up. It's like,
+
+263
+00:21:58,320 --> 00:22:03,840
+now you're inherently inheriting all the problems of WordPress. So first, before you can do anything
+
+264
+00:22:03,840 --> 00:22:09,680
+innovative, you have to step back and solve all the bad things that you don't like or that's broken
+
+265
+00:22:09,680 --> 00:22:12,680
+or they just need fixing or it's a massive.
+
+266
+00:22:12,680 --> 00:22:17,080
+And then you have to open source that.
+
+267
+00:22:17,080 --> 00:22:20,000
+You have to open source that.
+
+268
+00:22:20,000 --> 00:22:23,960
+So then they could fork it back or something.
+
+269
+00:22:23,960 --> 00:22:25,720
+They can-- everyone benefits from it.
+
+270
+00:22:25,720 --> 00:22:27,920
+But do you-- are you comfortable with everyone benefiting
+
+271
+00:22:27,920 --> 00:22:28,200
+from it?
+
+272
+00:22:28,200 --> 00:22:30,840
+Are you comfortable with building a better WordPress
+
+273
+00:22:30,840 --> 00:22:35,760
+and then someone somehow making millions of dollars off of it?
+
+274
+00:22:35,760 --> 00:22:38,080
+Are you comfortable with you not getting any of that credit?
+
+275
+00:22:38,080 --> 00:22:40,680
+which is okay, some people are like that.
+
+276
+00:22:40,680 --> 00:22:44,680
+But then it depends on how big of a community is too.
+
+277
+00:22:44,680 --> 00:22:49,160
+So much of like the modern cloud native stack
+
+278
+00:22:49,160 --> 00:22:52,800
+has these pieces in it that are from a single maintainer.
+
+279
+00:22:52,800 --> 00:22:55,200
+Like a single person is maintaining,
+
+280
+00:22:55,200 --> 00:22:57,160
+single person maintains pearl.
+
+281
+00:22:57,160 --> 00:23:01,240
+Like, and they do it great, but in sales,
+
+282
+00:23:01,240 --> 00:23:02,280
+they always say hit by the bus,
+
+283
+00:23:02,280 --> 00:23:05,440
+but I heard a different last year's coupon,
+
+284
+00:23:05,440 --> 00:23:07,800
+which is what if someone wins the lottery suddenly?
+
+285
+00:23:07,800 --> 00:23:10,920
+Are they going to still continue maintaining it?
+
+286
+00:23:10,920 --> 00:23:12,760
+What if something happens to them, things like that?
+
+287
+00:23:12,760 --> 00:23:17,160
+There's a positive and negative to open source in every way.
+
+288
+00:23:17,160 --> 00:23:22,520
+But the only solution that is going forward right now
+
+289
+00:23:22,520 --> 00:23:25,540
+is to get more people involved and persuade more people,
+
+290
+00:23:25,540 --> 00:23:27,000
+persuade more companies, I guess,
+
+291
+00:23:27,000 --> 00:23:32,040
+if people can do it to invest in open source.
+
+292
+00:23:32,040 --> 00:23:33,160
+If you're using open source,
+
+293
+00:23:33,160 --> 00:23:34,320
+you should be investing in it.
+
+294
+00:23:34,320 --> 00:23:37,200
+You should be paying your staff to contribute to it.
+
+295
+00:23:37,200 --> 00:23:40,720
+But in the meantime the communities need to find a way to
+
+296
+00:23:40,720 --> 00:23:43,760
+motivate a
+
+297
+00:23:43,760 --> 00:23:45,760
+mostly voluntary community
+
+298
+00:23:45,760 --> 00:23:48,800
+like community leadership, but the community itself. So
+
+299
+00:23:48,800 --> 00:23:55,340
+Yeah, there's a couple of things I'm going to dig into there just just to like cycle back on the striped thing like
+
+300
+00:23:55,340 --> 00:23:58,400
+Oh, like I live in South Africa. So
+
+301
+00:23:58,400 --> 00:24:00,480
+and
+
+302
+00:24:00,480 --> 00:24:02,480
+for the entire African continent
+
+303
+00:24:02,720 --> 00:24:05,200
+Stripe is still not available.
+
+304
+00:24:05,200 --> 00:24:07,600
+Like I can pay somebody if you use Stripe,
+
+305
+00:24:07,600 --> 00:24:10,080
+but I can't use Stripe to accept money.
+
+306
+00:24:10,080 --> 00:24:15,080
+Now, as a result, I have stumbled upon many things
+
+307
+00:24:15,080 --> 00:24:21,960
+like Substack, like Ghost Pro and other services
+
+308
+00:24:21,960 --> 00:24:25,600
+where it makes it possible for you to, for example,
+
+309
+00:24:25,600 --> 00:24:28,840
+create educational material in a nice environment
+
+310
+00:24:28,840 --> 00:24:32,400
+where it supports markdown, it supports embeds of video
+
+311
+00:24:32,400 --> 00:24:36,400
+of like little code snippets, code editors, all these things, which is super nice.
+
+312
+00:24:36,400 --> 00:24:41,760
+But then when you want to think about, okay, what can I do for a membership tier?
+
+313
+00:24:41,760 --> 00:24:51,360
+It says connect stripe and I'm like, I'd like to, but I can't. Then stripe has this thing called
+
+314
+00:24:51,360 --> 00:24:57,680
+stripe atlas, which allows you to incorporate as a company and Delaware in the United States.
+
+315
+00:24:58,240 --> 00:25:06,320
+but that costs $500 to start off with and then $100 per year to keep that going.
+
+316
+00:25:06,320 --> 00:25:12,240
+It goes to where of this? I'm sure they should be, but I was thinking of
+
+317
+00:25:12,240 --> 00:25:17,520
+you didn't say that yeah I would bring it to their attention they may not know and they may choose to
+
+318
+00:25:17,520 --> 00:25:21,440
+also integrate with another payment provider. That's the interesting thing. According to their
+
+319
+00:25:21,440 --> 00:25:26,800
+docs you could use PayPal but if I follow their docs and how it's supposed to work it doesn't
+
+320
+00:25:26,800 --> 00:25:28,800
+It doesn't align with the product.
+
+321
+00:25:28,800 --> 00:25:33,800
+Part of the problem, docs are one of those things when you have a mostly volunteer community
+
+322
+00:25:33,800 --> 00:25:36,800
+or also at corporations.
+
+323
+00:25:36,800 --> 00:25:41,800
+These are something that the majority of engineers creating code don't have time or
+
+324
+00:25:41,800 --> 00:25:45,800
+energy or inclination to create an update docs.
+
+325
+00:25:45,800 --> 00:25:50,800
+So, and guess what? A lot of these different things need recognition too.
+
+326
+00:25:50,800 --> 00:25:55,800
+If you have an amazing docs person in your community, you need to recognize the
+
+327
+00:25:55,800 --> 00:25:59,200
+the fuck out of them if they are providing that sort of stuff.
+
+328
+00:25:59,200 --> 00:26:03,160
+So you as a community member need to report
+
+329
+00:26:03,160 --> 00:26:08,160
+or maybe you ask, why is this not working?
+
+330
+00:26:08,160 --> 00:26:10,960
+Figure out if they can fix it or you can fix it
+
+331
+00:26:10,960 --> 00:26:13,400
+and then you could contribute updating that documentation.
+
+332
+00:26:13,400 --> 00:26:14,320
+- Yeah, exactly so.
+
+333
+00:26:14,320 --> 00:26:15,240
+- But that's the problem.
+
+334
+00:26:15,240 --> 00:26:17,720
+You're not paying for a tool so it's like that.
+
+335
+00:26:17,720 --> 00:26:21,120
+But they're very good because of how
+
+336
+00:26:21,120 --> 00:26:26,880
+And diverse only 2% of open source contributions come from Africa.
+
+337
+00:26:26,880 --> 00:26:27,880
+Wow.
+
+338
+00:26:27,880 --> 00:26:33,520
+So they may not be aware of this because they may not have community members complaining about this.
+
+339
+00:26:33,520 --> 00:26:34,520
+Exactly.
+
+340
+00:26:34,520 --> 00:26:38,160
+So while it's 17% of the world population.
+
+341
+00:26:38,160 --> 00:26:39,160
+So that's a problem.
+
+342
+00:26:39,160 --> 00:26:44,160
+Now that may change now because now there is a GitHub app for the first time.
+
+343
+00:26:44,160 --> 00:26:50,000
+So it makes it much more easier for someone that doesn't have a computer but is the next generation
+
+344
+00:26:50,000 --> 00:26:54,400
+And then the second half of the world going online is skipping laptops, skipping home
+
+345
+00:26:54,400 --> 00:26:58,440
+internet, they're connecting via mobile devices.
+
+346
+00:26:58,440 --> 00:27:05,800
+So now that there is a GitHub app that may evolve quicker or maybe not because again, so
+
+347
+00:27:05,800 --> 00:27:10,020
+lower income countries mostly where people don't have time to do this and still there's
+
+348
+00:27:10,020 --> 00:27:14,240
+problems like charging a cell phone, things like that are they going to spend that time.
+
+349
+00:27:14,240 --> 00:27:18,200
+But if it's that percentage, they may just not know.
+
+350
+00:27:18,200 --> 00:27:19,160
+So you have to inform.
+
+351
+00:27:19,160 --> 00:27:21,040
+But that's the thing.
+
+352
+00:27:21,040 --> 00:27:22,560
+You're getting something for free.
+
+353
+00:27:22,560 --> 00:27:24,080
+You need to inform them what you want
+
+354
+00:27:24,080 --> 00:27:26,360
+'cause they may or may not have a product backlog
+
+355
+00:27:26,360 --> 00:27:30,280
+and they may not know what it is.
+
+356
+00:27:30,280 --> 00:27:32,880
+You have less power because you're not a consumer,
+
+357
+00:27:32,880 --> 00:27:33,920
+but you still have power.
+
+358
+00:27:33,920 --> 00:27:35,600
+You just have to use your voice more.
+
+359
+00:27:35,600 --> 00:27:38,080
+You may have more power because maybe people didn't say
+
+360
+00:27:38,080 --> 00:27:38,920
+anything.
+
+361
+00:27:38,920 --> 00:27:40,440
+It could be something they just really didn't know.
+
+362
+00:27:40,440 --> 00:27:41,760
+- Yeah, yeah, that's true.
+
+363
+00:27:41,760 --> 00:27:46,320
+I mean, I think that is something that maybe has mechanically
+
+364
+00:27:46,320 --> 00:27:49,600
+and frequently can be more of is raising these issues,
+
+365
+00:27:49,600 --> 00:27:54,040
+writing about it, and directly contacting the people.
+
+366
+00:27:54,040 --> 00:27:58,680
+'Cause I, through all the years I've worked at Mozilla
+
+367
+00:27:58,680 --> 00:28:00,480
+or worked as a contractor at Mozilla,
+
+368
+00:28:00,480 --> 00:28:05,480
+I have built up relationships with some of the most well-known
+
+369
+00:28:05,480 --> 00:28:08,160
+people in the open-source industry.
+
+370
+00:28:08,160 --> 00:28:09,760
+So I do have connections.
+
+371
+00:28:11,160 --> 00:28:16,160
+Yeah, but okay, I need to warn you, Mozilla is special.
+
+372
+00:28:16,160 --> 00:28:19,320
+Mozilla is not the typical open source industry.
+
+373
+00:28:19,320 --> 00:28:23,120
+It is the example people should follow from their most fast
+
+374
+00:28:23,120 --> 00:28:26,120
+to everything with includes inclusion, not just,
+
+375
+00:28:26,120 --> 00:28:27,840
+and I'm not just talking about the open source side,
+
+376
+00:28:27,840 --> 00:28:30,400
+I'm also talking about the team side,
+
+377
+00:28:30,400 --> 00:28:33,000
+their your ability to work from anywhere,
+
+378
+00:28:33,000 --> 00:28:35,560
+you can work from home or in office or half and half,
+
+379
+00:28:35,560 --> 00:28:37,040
+but we'll figure out where you get the money,
+
+380
+00:28:37,040 --> 00:28:38,120
+things like that.
+
+381
+00:28:38,120 --> 00:28:40,320
+They are an exemplary company.
+
+382
+00:28:40,320 --> 00:28:43,760
+Are they the most successful financially though,
+
+383
+00:28:43,760 --> 00:28:46,000
+as an open source back company?
+
+384
+00:28:46,000 --> 00:28:48,120
+They have struggles, they've had a bunch of rounds
+
+385
+00:28:48,120 --> 00:28:50,440
+of layoffs and things, so that's true.
+
+386
+00:28:50,440 --> 00:28:53,160
+We must admit that they're not maybe the best business,
+
+387
+00:28:53,160 --> 00:28:56,400
+but they're an exemplary way to do business ethically
+
+388
+00:28:56,400 --> 00:28:58,840
+and to care for your community.
+
+389
+00:28:58,840 --> 00:29:01,680
+But they invest a lot more in the community
+
+390
+00:29:01,680 --> 00:29:05,880
+than pretty much almost any other open source project I know
+
+391
+00:29:05,880 --> 00:29:10,080
+that isn't CNCF or maybe something red out open switch
+
+392
+00:29:10,080 --> 00:29:14,520
+things like that where they're doing, but they started it.
+
+393
+00:29:14,520 --> 00:29:16,560
+They really have been doing it for a lot longer.
+
+394
+00:29:16,560 --> 00:29:21,560
+So I hate to admit that most open source communities
+
+395
+00:29:21,560 --> 00:29:24,640
+are not going to be that way, but they should.
+
+396
+00:29:24,640 --> 00:29:26,400
+- Yeah, no, I agree, no, I agree.
+
+397
+00:29:26,400 --> 00:29:28,400
+And I'm just yesterday,
+
+398
+00:29:28,400 --> 00:29:34,000
+Ms. Olob posted, Moxum posted the state of Ms. Olob
+
+399
+00:29:34,000 --> 00:29:35,080
+and what's next.
+
+400
+00:29:35,080 --> 00:29:37,360
+I think you should look that up.
+
+401
+00:29:38,640 --> 00:29:45,920
+It's a very positive piece and I was glad to read that because I had my concerns to be honest.
+
+402
+00:29:45,920 --> 00:29:48,160
+I'm from the financial perspective.
+
+403
+00:29:48,160 --> 00:29:54,240
+Missilla has been fighting giants and it started to show.
+
+404
+00:29:54,240 --> 00:30:03,600
+But I think there's a new found purpose to the company.
+
+405
+00:30:03,600 --> 00:30:07,840
+Again, the inflection point I mentioned at the start.
+
+406
+00:30:07,840 --> 00:30:16,560
+I think they've recognized it and I think they're embracing the challenge which I'm happy to see.
+
+407
+00:30:16,560 --> 00:30:22,560
+I myself still need to read all the details but I kind of read the TLDR and it sounds really positive.
+
+408
+00:30:22,560 --> 00:30:26,880
+And I like the fact that the foundation is driving a lot more of it again.
+
+409
+00:30:26,880 --> 00:30:34,880
+Because I think, you know, they're the ones who's still squarely focused on the mission.
+
+410
+00:30:34,880 --> 00:30:40,600
+The corporation sometimes needs to deviate from that a little bit to make the money to
+
+411
+00:30:40,600 --> 00:30:45,960
+support the foundation so that they can do the work.
+
+412
+00:30:45,960 --> 00:30:55,000
+And the thing is, inside Mozilla, there's a very open culture of voicing your opinion
+
+413
+00:30:55,000 --> 00:30:58,240
+without fear of retaliation.
+
+414
+00:30:58,240 --> 00:31:03,720
+And I think that is something that I, having worked that way, I can't see myself working
+
+415
+00:31:03,720 --> 00:31:07,080
+any other way, so it'll just naturally be part of whatever I create.
+
+416
+00:31:07,080 --> 00:31:14,920
+And for those listening, this is being recorded on Friday, November 18th, we are obviously thinking
+
+417
+00:31:14,920 --> 00:31:20,040
+of this under the context of the recent Twitter acquisition. Yeah, yeah, yeah. And the consequences
+
+418
+00:31:20,040 --> 00:31:26,600
+choose specifically engineers for talking out publicly against, which also that's a difference
+
+419
+00:31:26,600 --> 00:31:31,080
+though, speaking up in within a company, then speaking publicly. Yeah. There can be proper
+
+420
+00:31:31,080 --> 00:31:37,560
+questions that doesn't mean people at Mozilla are talking shit externally. So I don't know if they
+
+421
+00:31:37,560 --> 00:31:44,120
+would be legally covered or not. Yeah I don't know either. But I've seen people talking pretty
+
+422
+00:31:44,120 --> 00:31:50,920
+openly about problems and I had while at Mozilla without me knowing that they were, that there was
+
+423
+00:31:50,920 --> 00:31:58,920
+anything legally happening to them. But of course I know them not necessarily personally so what
+
+424
+00:31:58,920 --> 00:32:00,120
+what happened to them.
+
+425
+00:32:00,120 --> 00:32:04,400
+But with that say, there are the type of people who,
+
+426
+00:32:04,400 --> 00:32:07,440
+if something that happened, they would not shy away
+
+427
+00:32:07,440 --> 00:32:08,920
+from talking about it.
+
+428
+00:32:08,920 --> 00:32:14,640
+- Hopefully nothing changes 'cause one leadership change,
+
+429
+00:32:14,640 --> 00:32:16,840
+and that can be a big dramatic difference.
+
+430
+00:32:16,840 --> 00:32:19,600
+We like to think that we have power, but.
+
+431
+00:32:19,600 --> 00:32:20,760
+- No, no, no, that's very true.
+
+432
+00:32:20,760 --> 00:32:22,200
+- For building our suddenly buys
+
+433
+00:32:22,200 --> 00:32:26,280
+if not very profitable company, things can change.
+
+434
+00:32:26,280 --> 00:32:28,240
+A centipilion error, I think.
+
+435
+00:32:28,240 --> 00:32:29,080
+Yeah.
+
+436
+00:32:29,080 --> 00:32:35,000
+Yeah, so that is interesting that you brought up that topic.
+
+437
+00:32:35,000 --> 00:32:36,240
+I think before we dig into that,
+
+438
+00:32:36,240 --> 00:32:38,840
+I just wanted like cycle back something else.
+
+439
+00:32:38,840 --> 00:32:41,640
+So the changes that you envision,
+
+440
+00:32:41,640 --> 00:32:43,120
+like so you said like, you know,
+
+441
+00:32:43,120 --> 00:32:45,800
+companies should be more open to like sponsoring,
+
+442
+00:32:45,800 --> 00:32:47,720
+to encouraging contributions.
+
+443
+00:32:47,720 --> 00:32:48,560
+But do you?
+
+444
+00:32:48,560 --> 00:32:50,920
+- If there been a firm technology,
+
+445
+00:32:50,920 --> 00:32:54,080
+they are doing an actual risk to their bottom line
+
+446
+00:32:54,080 --> 00:32:57,040
+and their company and their customers and their data
+
+447
+00:32:57,040 --> 00:33:04,040
+because that's what it comes down to a lot when something happens by not investing in their staff contributing to it.
+
+448
+00:33:04,040 --> 00:33:25,440
+Like, this is how there can be larger sponsorship, there can be conferences, there can be et cetera, but just paying staffers to be contributors is a wonderful simple way to give back to a community that someone at least half time is focused on adding that or a documentarian or whatever it is.
+
+449
+00:33:25,440 --> 00:33:27,280
+like that is a logical way.
+
+450
+00:33:27,280 --> 00:33:29,640
+That is something out of my hands.
+
+451
+00:33:29,640 --> 00:33:33,640
+But there are a lot of things that happen
+
+452
+00:33:33,640 --> 00:33:36,760
+in the severely distributed.
+
+453
+00:33:36,760 --> 00:33:38,800
+It's one of the first remote communities.
+
+454
+00:33:38,800 --> 00:33:42,440
+Most open source projects are the most distributed
+
+455
+00:33:42,440 --> 00:33:48,440
+community is a lot that people get away with.
+
+456
+00:33:48,440 --> 00:33:52,560
+Harassment, gatekeeping, saying, oh, that's easy.
+
+457
+00:33:52,560 --> 00:33:53,280
+You can do that.
+
+458
+00:33:53,280 --> 00:33:54,840
+That doesn't help anybody.
+
+459
+00:33:54,840 --> 00:33:57,960
+having guidelines for how to speak to people,
+
+460
+00:33:57,960 --> 00:34:01,040
+having a code of conduct,
+
+461
+00:34:01,040 --> 00:34:02,740
+reminding people of the code of conduct,
+
+462
+00:34:02,740 --> 00:34:05,480
+making them read it before they join,
+
+463
+00:34:05,480 --> 00:34:09,600
+then actually having a way to enforce a code of conduct.
+
+464
+00:34:09,600 --> 00:34:11,360
+I do be through the new stack.
+
+465
+00:34:11,360 --> 00:34:15,280
+I do a lot of coverage of CoupCon and CNCF stuff,
+
+466
+00:34:15,280 --> 00:34:18,720
+but be the first to use as an example.
+
+467
+00:34:18,720 --> 00:34:20,040
+Maybe it's two years ago now,
+
+468
+00:34:20,040 --> 00:34:21,960
+'cause what is time for those times?
+
+469
+00:34:21,960 --> 00:34:24,720
+- Yeah. - I mean, this big deal.
+
+470
+00:34:24,720 --> 00:34:31,120
+There was an asshole white supremacist tweeting white supremacist stuff and they banned him from one of the cube con events.
+
+471
+00:34:31,120 --> 00:34:42,400
+Okay, yeah, that's great. They made a big example of it. Oh, look how great we are. But at that same event. I think so this must be like three years. It was back when they were in person before they went online. Now they're in person again.
+
+472
+00:34:42,400 --> 00:34:46,880
+I personally need four women that group to act cube con events.
+
+473
+00:34:47,240 --> 00:34:48,320
+- I can't leave this stuff.
+
+474
+00:34:48,320 --> 00:34:49,920
+- So they did one thing once.
+
+475
+00:34:49,920 --> 00:34:50,760
+- Yeah.
+
+476
+00:34:50,760 --> 00:34:51,880
+- Who gives a thought?
+
+477
+00:34:51,880 --> 00:34:54,920
+Like yeah, it's important to destroy what's a premises,
+
+478
+00:34:54,920 --> 00:34:56,320
+but guess what?
+
+479
+00:34:56,320 --> 00:34:58,400
+There's a lot more things you could do as well.
+
+480
+00:34:58,400 --> 00:35:01,920
+So you need to have an enforceable code of conduct.
+
+481
+00:35:01,920 --> 00:35:06,160
+You need to create examples of people if you need to.
+
+482
+00:35:06,160 --> 00:35:07,160
+You need to take receipts.
+
+483
+00:35:07,160 --> 00:35:09,400
+You need to then communicate with other communities
+
+484
+00:35:09,400 --> 00:35:12,120
+and find ways that they know that's,
+
+485
+00:35:12,120 --> 00:35:15,080
+'cause predatory people will just move
+
+486
+00:35:15,080 --> 00:35:19,560
+follow and do the same pattern in another community. So people need to be aware of it.
+
+487
+00:35:19,560 --> 00:35:25,000
+You need to take care of people who need to provide them basic human rights
+
+488
+00:35:25,000 --> 00:35:29,960
+if they're especially giving you free work, but they're doing anything.
+
+489
+00:35:29,960 --> 00:35:31,400
+You just need to treat people well.
+
+490
+00:35:31,400 --> 00:35:35,960
+Yeah, enough for sure. No, I agree. Do you think a lot of this, or some of this,
+
+491
+00:35:35,960 --> 00:35:40,520
+can be driven from a cross-reach level? What does it have to come from?
+
+492
+00:35:40,520 --> 00:35:47,520
+- No, there are certain things that have to come, not from the company, but from the open source leadership.
+
+493
+00:35:47,520 --> 00:35:53,520
+I'm not saying they're paid half of, what is it? 25, I probably butchering this.
+
+494
+00:35:53,520 --> 00:36:01,520
+More than half of open source maintainers make $1,000 a month or less all the way down to zero.
+
+495
+00:36:01,520 --> 00:36:08,520
+So these are people doing open source maintainers are overworked and overworked and underpaid.
+
+496
+00:36:08,520 --> 00:36:15,600
+which again, if people are, if companies are investing in it, maybe hire that person and pay them to do that.
+
+497
+00:36:15,600 --> 00:36:22,280
+Pay someone to run the community. If you are a company that even is investing in the engineering or is
+
+498
+00:36:22,280 --> 00:36:28,440
+reliant on that, but something happens really bad at that company, it looks bad on you. Also, if this,
+
+499
+00:36:28,440 --> 00:36:34,240
+and then from a business side, if the security is not taking care of things like that, like you can't do that.
+
+500
+00:36:34,240 --> 00:36:40,000
+So, grassroots, these are code of conduct.
+
+501
+00:36:40,000 --> 00:36:46,000
+That's something that is a requirement, like a check mark for women, even with enforcement
+
+502
+00:36:46,000 --> 00:36:52,600
+and all, to then go ahead and to even join.
+
+503
+00:36:52,600 --> 00:36:57,080
+So I think that needs to come from leadership and then it needs to be a priority, enforceable
+
+504
+00:36:57,080 --> 00:36:58,080
+code of conduct.
+
+505
+00:36:58,080 --> 00:37:01,560
+You need because there are certain things like saying who is the person that you contact
+
+506
+00:37:01,560 --> 00:37:02,560
+for stuff like that.
+
+507
+00:37:02,560 --> 00:37:10,000
+code of conduct is a feature within GitHub. I know GitHub is not the only way, but it's like 80%.
+
+508
+00:37:10,000 --> 00:37:18,080
+I'm sure that takes someone that administrative level to add that, things like that, but that
+
+509
+00:37:18,080 --> 00:37:24,480
+doesn't mean some of the community can't say, "Hey, can I do this? Can I help you with this?"
+
+510
+00:37:24,480 --> 00:37:29,600
+Anyone in a community can volunteer to do these things. One of the other problems that communities
+
+511
+00:37:29,600 --> 00:37:34,560
+have is they don't have a pathway to leadership. They don't have a clear pathway to leadership,
+
+512
+00:37:34,560 --> 00:37:42,800
+which is very important because you cannot stress. Maintainers are overworked and underpaid. So
+
+513
+00:37:42,800 --> 00:37:52,000
+how can they do that? I'm trying to find right now there's some really great metrics coming out
+
+514
+00:37:52,000 --> 00:38:00,960
+from the chaos community and others that the Linux Foundation and Qcon is trying to do. So like
+
+515
+00:38:00,960 --> 00:38:07,120
+when you're talking about a different basic level to have a code of conduct maybe turning on
+
+516
+00:38:07,120 --> 00:38:13,360
+closed captioning during meetings, the next level is publishing documentation and then having
+
+517
+00:38:13,360 --> 00:38:20,080
+a contributor ladder. The next level is being transparent like you said being open and honest about
+
+518
+00:38:20,080 --> 00:38:26,720
+how issues are picked up. One of obviously if you're the first time there are drive-through
+
+519
+00:38:26,720 --> 00:38:33,120
+contributors and you're contributing for the first time and someone rejects your PR without
+
+520
+00:38:33,120 --> 00:38:40,720
+telling you why, you're probably not coming back. Statistically, we need more studies like this,
+
+521
+00:38:40,720 --> 00:38:49,680
+this is a 2017 study, but I see no reason for it to be different. Unless a woman is a very
+
+522
+00:38:49,680 --> 00:38:55,680
+well-known contributor like you know leadership or maintainer level in all in a community or really well-known.
+
+523
+00:38:55,680 --> 00:39:13,680
+She is less likely for her pull request to be accepted. If these names are blinded or masked to get rid of the gender, a woman is more likely to be accepted, which I'm sure their code is better because we are sexual socialized to perfection.
+
+524
+00:39:13,680 --> 00:39:19,280
+perfection. It's same in the statistic that a woman will only apply for a job if she
+
+525
+00:39:19,280 --> 00:39:24,080
+meets 100% of the requirements, which we know job descriptions or bullshit, but a man will
+
+526
+00:39:24,080 --> 00:39:30,560
+at 65% again, just on the binary. Similarly, a woman I think would just be statistically more
+
+527
+00:39:30,560 --> 00:39:38,000
+likely to be submitting code that is much better, things like that. So knowing that, having some sort
+
+528
+00:39:38,000 --> 00:39:43,440
+of flagging system to make it easier for newcomers to understand where to go, but not just
+
+529
+00:39:43,440 --> 00:39:48,400
+new, maybe their newcomers to your community, but they're
+
+530
+00:39:48,400 --> 00:39:53,040
+entering your project and they're like hardcore GitHub contributors.
+
+531
+00:39:53,040 --> 00:39:58,760
+So there's a new project in academia right now, but hopefully
+
+532
+00:39:58,760 --> 00:40:03,760
+we'll see the crossover, which comes is looking to automatically
+
+533
+00:40:03,760 --> 00:40:10,480
+flag issues and pair them with people based on their history
+
+534
+00:40:10,480 --> 00:40:12,240
+of contribution on GitHub over.
+
+535
+00:40:12,240 --> 00:40:18,860
+That's interesting. That would be a way to automate that. So there are ways to automate as well. So there's a lot of stuff. It's
+
+536
+00:40:18,860 --> 00:40:20,300
+Fabio
+
+537
+00:40:20,300 --> 00:40:22,420
+Of course, I believe this is coming out of there
+
+538
+00:40:22,420 --> 00:40:28,100
+That is the head of that project is coming out of the to-do group. I need chance or is it separate?
+
+539
+00:40:28,100 --> 00:40:34,800
+No, this is this is an academic who went on his own to do so now the next chance is
+
+540
+00:40:34,800 --> 00:40:40,040
+Partner academia. This is a constant problem that academia partner
+
+541
+00:40:40,440 --> 00:40:46,760
+AI, Deblonic tends to be a bit better than anything else, but you know, the next step, but he's
+
+542
+00:40:46,760 --> 00:40:51,720
+applied to give a talk of CoupCon, so hopefully he'll get that talk now. I encourage him because
+
+543
+00:40:51,720 --> 00:40:56,680
+so he can share his research and all to take to the next level of scale. Yeah, that sounds pretty
+
+544
+00:40:56,680 --> 00:41:00,760
+interesting. Yeah, that sounds pretty good. Something you mentioned earlier that had me thinking,
+
+545
+00:41:00,760 --> 00:41:07,320
+you were talking about somebody trying to fork something because it was in Russia or something.
+
+546
+00:41:07,320 --> 00:41:12,840
+That there was a huge pressure. This last February March for GitHub to ban Russian projects.
+
+547
+00:41:12,840 --> 00:41:17,560
+Yeah. Yeah. Yeah. Which I don't think they did. And they did not touch that one. Yeah.
+
+548
+00:41:17,560 --> 00:41:24,200
+But there was definitely a pressure to that. But imagine people that are reliant on that code.
+
+549
+00:41:24,200 --> 00:41:30,200
+Imagine there's ethics around it should it happen or not. And also when you cut off,
+
+550
+00:41:30,200 --> 00:41:33,640
+I mean, let's call Russia as continent.
+
+551
+00:41:35,080 --> 00:41:40,360
+when you cut that off, how are they getting access to people outside when you live under a dictator
+
+552
+00:41:40,360 --> 00:41:45,240
+regime? So there's a positive and negative to everything. And open source just reflects
+
+553
+00:41:45,240 --> 00:41:54,760
+society more because of its on-duckness. Yeah, yeah, that's a complicated one because often the people
+
+554
+00:41:54,760 --> 00:42:03,960
+writing that software is not for what's going on in Ukraine. And therefore, they're being
+
+555
+00:42:03,960 --> 00:42:07,720
+punished for living in a country that they don't necessarily agree with what's happening.
+
+556
+00:42:07,720 --> 00:42:12,840
+I mean, there's a lot of stuff. But it's still a form of sanction. No, it is.
+
+557
+00:42:12,840 --> 00:42:15,560
+Can sanctions work with our Megalomania? Yeah.
+
+558
+00:42:15,560 --> 00:42:21,400
+Dictator, we don't know, but in general, sanctions should logically work, but it could be deemed
+
+559
+00:42:21,400 --> 00:42:30,360
+dissanctioned. But can corporations now Microsoft own and get up? Can Microsoft have the power of
+
+560
+00:42:30,360 --> 00:42:33,080
+of a country to sanction either.
+
+561
+00:42:33,080 --> 00:42:35,120
+So there's that question as well.
+
+562
+00:42:35,120 --> 00:42:36,560
+GitHub, we look at it as like,
+
+563
+00:42:36,560 --> 00:42:38,640
+it is on my Microsoft, Simon LinkedIn.
+
+564
+00:42:38,640 --> 00:42:40,200
+- Yeah, yeah.
+
+565
+00:42:40,200 --> 00:42:43,880
+And a few years ago, I would,
+
+566
+00:42:43,880 --> 00:42:44,960
+I have not had like that,
+
+567
+00:42:44,960 --> 00:42:47,580
+but Microsoft has turned around, big time.
+
+568
+00:42:47,580 --> 00:42:50,840
+I just constantly see.
+
+569
+00:42:50,840 --> 00:42:52,440
+- Certainly for green.
+
+570
+00:42:52,440 --> 00:42:55,560
+- Yeah, I see so many good things coming out of them
+
+571
+00:42:55,560 --> 00:42:57,760
+and they're doing so much for
+
+572
+00:42:59,600 --> 00:43:07,840
+accessibility is incredible. Just yesterday, I noticed they have the ability and teams to have
+
+573
+00:43:07,840 --> 00:43:14,480
+sign language interpreters join your team's meetings. I mean it's such an obvious thing but
+
+574
+00:43:14,480 --> 00:43:24,880
+you know, yet they are the first to do it. And then I saw that whole range of gadgetry that they have
+
+575
+00:43:24,880 --> 00:43:29,640
+with the buttons and the joysticks that you can turn around and use it to
+
+576
+00:43:29,640 --> 00:43:34,840
+achieve. And it's all the parts can be into change to, you know, make it for
+
+577
+00:43:34,840 --> 00:43:40,000
+just your need. It's just incredible. And this is the benefit of having diverse
+
+578
+00:43:40,000 --> 00:43:47,560
+engineers on your team and user testing, but that can only come. The UK government,
+
+579
+00:43:47,560 --> 00:43:53,920
+the UK government, a hot mask. UK government digital service is very impressive.
+
+580
+00:43:53,920 --> 00:44:01,920
+It is extremely accessible because they started from the start. There are no edge cases. If everything is going paperless,
+
+581
+00:44:01,920 --> 00:44:08,920
+there are no edge cases. Everyone has to use it. And part of what they did was from the start, they hired blind developers and
+
+582
+00:44:08,920 --> 00:44:21,920
+different developers with one arm or different disabilities. Because guess what? Those are people who are neurodiverse, who are much more likely both all of these groups are
+
+583
+00:44:21,920 --> 00:44:28,260
+tend to be have higher levels of unemployment significantly higher. But guess what?
+
+584
+00:44:28,260 --> 00:44:32,520
+So you're doing a good thing, but also you're making a better project. And that's why open
+
+585
+00:44:32,520 --> 00:44:37,880
+source means, well, the source reflection of the world. That's why everything needs. But my
+
+586
+00:44:37,880 --> 00:44:43,900
+constant mantra is, if tech is the future, and open source is the backbone of the future,
+
+587
+00:44:43,900 --> 00:44:51,600
+because we're talking like 70% of businesses, jardeef code, things like that. Who is participating
+
+588
+00:44:51,600 --> 00:44:56,320
+and building in that future. And how are we damaging that future by blocking people from participating?
+
+589
+00:44:56,320 --> 00:45:00,880
+Yeah. That's my mantra. Yeah, yeah, I know for sure. In various words. Yeah, I know for sure.
+
+590
+00:45:00,880 --> 00:45:07,680
+So you also wrote a piece in that, you know, obviously it's very well-timed now with what's
+
+591
+00:45:07,680 --> 00:45:17,920
+happening in tech fear and layoffs. It's massive. And it's interesting, I think it's the ex.
+
+592
+00:45:17,920 --> 00:45:20,800
+No, sir, am I writing it?
+
+593
+00:45:20,800 --> 00:45:26,960
+And so the X, I think it's the XCO of GitHub that said,
+
+594
+00:45:26,960 --> 00:45:29,240
+all these companies know they're overstaffed,
+
+595
+00:45:29,240 --> 00:45:31,240
+and they've just not acknowledged it.
+
+596
+00:45:31,240 --> 00:45:36,000
+And now they're being hit with all these,
+
+597
+00:45:36,000 --> 00:45:38,520
+the climate of economic climate,
+
+598
+00:45:38,520 --> 00:45:42,800
+and they now have to acknowledge that they have flown
+
+599
+00:45:42,800 --> 00:45:46,160
+too high for too long.
+
+600
+00:45:46,160 --> 00:45:48,640
+- Okay, first we're not gonna talk about Twitter
+
+601
+00:45:48,640 --> 00:45:50,160
+because that is a different generation.
+
+602
+00:45:50,160 --> 00:45:51,760
+And that is an-- - Completely different.
+
+603
+00:45:51,760 --> 00:45:53,040
+- That doesn't make sense.
+
+604
+00:45:53,040 --> 00:45:58,040
+But L'Arthacal, who's someone I interviewed for the article,
+
+605
+00:45:58,040 --> 00:46:01,920
+someone that does is like an engineering leadership coach,
+
+606
+00:46:01,920 --> 00:46:05,280
+she said the truth is these companies are making up
+
+607
+00:46:05,280 --> 00:46:07,440
+that they could have laid off zero people
+
+608
+00:46:07,440 --> 00:46:08,920
+and it wouldn't have had an impact.
+
+609
+00:46:08,920 --> 00:46:13,920
+So this is, the companies that are doing this,
+
+610
+00:46:15,280 --> 00:46:19,040
+Besides like a Peloton, which kind of like lost its way post COVID.
+
+611
+00:46:19,040 --> 00:46:22,400
+And I don't think anyone was shot like we feel bad for the people.
+
+612
+00:46:22,400 --> 00:46:25,000
+And besides maybe Salesforce.com, we don't know,
+
+613
+00:46:25,000 --> 00:46:26,760
+but they were probably doing the same.
+
+614
+00:46:26,760 --> 00:46:31,760
+These giant companies that are doing layoffs right now,
+
+615
+00:46:31,760 --> 00:46:38,760
+meta or blot were doing hiring freezes, Microsoft, etc.
+
+616
+00:46:38,760 --> 00:46:41,240
+were hiring because they could.
+
+617
+00:46:42,440 --> 00:46:48,160
+There was time six months ago, even, where they had the money.
+
+618
+00:46:48,160 --> 00:46:51,620
+It's like, let's just all fight over developers.
+
+619
+00:46:51,620 --> 00:46:55,320
+Let's just fight over engineers and let's pay them six figure bonuses,
+
+620
+00:46:55,320 --> 00:46:57,380
+which good for those people that got those roles,
+
+621
+00:46:57,380 --> 00:47:00,840
+but then first last hard, first fire.
+
+622
+00:47:00,840 --> 00:47:01,600
+>> Mm-hm.
+
+623
+00:47:01,600 --> 00:47:05,560
+>> But it was irresponsible and it was capitalism.
+
+624
+00:47:05,560 --> 00:47:06,320
+That's what it was.
+
+625
+00:47:06,320 --> 00:47:08,480
+They had the money to compete and they won't.
+
+626
+00:47:08,480 --> 00:47:11,000
+Do I think overall this is where it's going?
+
+627
+00:47:11,000 --> 00:47:12,320
+I don't think.
+
+628
+00:47:12,320 --> 00:47:14,480
+So in tech, I think overall we are,
+
+629
+00:47:14,480 --> 00:47:17,080
+it's quite clear we're entering recession.
+
+630
+00:47:17,080 --> 00:47:20,240
+It was an irresponsible, like I can do it,
+
+631
+00:47:20,240 --> 00:47:21,640
+so I'm gonna compete and do it.
+
+632
+00:47:21,640 --> 00:47:23,960
+And hopefully those people had savings
+
+633
+00:47:23,960 --> 00:47:25,880
+that had those jobs, things like that.
+
+634
+00:47:25,880 --> 00:47:28,480
+But also the truth of the matter is,
+
+635
+00:47:28,480 --> 00:47:31,360
+none of these companies, they're doing it for stock
+
+636
+00:47:31,360 --> 00:47:35,200
+and margins and boards and things that are so separated
+
+637
+00:47:35,200 --> 00:47:36,880
+from the human being.
+
+638
+00:47:36,880 --> 00:47:39,520
+But it's basically its capitalism.
+
+639
+00:47:39,520 --> 00:47:43,440
+So that's the fucked up system we agreed to participate in.
+
+640
+00:47:43,440 --> 00:47:45,700
+So it's not great.
+
+641
+00:47:45,700 --> 00:47:47,660
+I feel bad for the individuals and their families,
+
+642
+00:47:47,660 --> 00:47:48,520
+but--
+
+643
+00:47:48,520 --> 00:47:50,720
+And especially when we're talking about,
+
+644
+00:47:50,720 --> 00:47:53,640
+we forget contract workers will be cut
+
+645
+00:47:53,640 --> 00:47:56,740
+so that security guards, cleaners for buildings,
+
+646
+00:47:56,740 --> 00:47:59,380
+cafeteria workers, because we know Facebook
+
+647
+00:47:59,380 --> 00:48:01,120
+or whatever we want to call these days,
+
+648
+00:48:01,120 --> 00:48:02,960
+famously has food, all these companies,
+
+649
+00:48:02,960 --> 00:48:03,800
+that food, things like that.
+
+650
+00:48:03,800 --> 00:48:05,960
+Those are the things being cut as well.
+
+651
+00:48:05,960 --> 00:48:07,680
+And nobody's talking about the workers
+
+652
+00:48:07,680 --> 00:48:09,680
+and those are the workers that will be screwed.
+
+653
+00:48:09,680 --> 00:48:11,560
+These are also the workers at least in the US
+
+654
+00:48:11,560 --> 00:48:13,920
+that are mobilizing a lot and unionizing,
+
+655
+00:48:13,920 --> 00:48:14,920
+so maybe not.
+
+656
+00:48:14,920 --> 00:48:20,400
+I believe Metas or Facebook, Papakaria workers
+
+657
+00:48:20,400 --> 00:48:21,800
+were some of the first tech unions,
+
+658
+00:48:21,800 --> 00:48:24,280
+so we'll see maybe they're okay.
+
+659
+00:48:24,280 --> 00:48:29,280
+But it's just, it was a downer of a week last week.
+
+660
+00:48:29,280 --> 00:48:33,640
+Let's be honest, because there were just layoff after layoff
+
+661
+00:48:33,640 --> 00:48:35,520
+it felt like a blood bath,
+
+662
+00:48:35,520 --> 00:48:44,480
+But it's just, typically they have contracts in California or Europe where they have some
+
+663
+00:48:44,480 --> 00:48:48,800
+sort of job security at least to get severance and things and hopefully they can get their
+
+664
+00:48:48,800 --> 00:48:49,800
+next job.
+
+665
+00:48:49,800 --> 00:48:52,000
+They just need to figure out how to go about that.
+
+666
+00:48:52,000 --> 00:48:55,480
+It's harder also for people that are like left behind at a company in the back.
+
+667
+00:48:55,480 --> 00:48:56,480
+So just sucks.
+
+668
+00:48:56,480 --> 00:48:57,720
+So they're also planning their move.
+
+669
+00:48:57,720 --> 00:49:01,200
+So there will be tons of moves in tech in the next couple months.
+
+670
+00:49:01,200 --> 00:49:05,160
+Maybe the wait till January, February, but yeah.
+
+671
+00:49:05,160 --> 00:49:06,000
+- It's okay.
+
+672
+00:49:06,000 --> 00:49:08,120
+- So there will be many things.
+
+673
+00:49:08,120 --> 00:49:10,120
+There's still a lot in demand and things.
+
+674
+00:49:10,120 --> 00:49:12,400
+It's just more worrying when,
+
+675
+00:49:12,400 --> 00:49:13,760
+like a Twitter I know he said,
+
+676
+00:49:13,760 --> 00:49:14,680
+"Let's not talk about it,"
+
+677
+00:49:14,680 --> 00:49:16,960
+but when he fires his entire ethical team,
+
+678
+00:49:16,960 --> 00:49:20,280
+which Twitter was a standout with that.
+
+679
+00:49:20,280 --> 00:49:21,840
+They were at least very transparent
+
+680
+00:49:21,840 --> 00:49:25,200
+and much more than any other algorithms we see
+
+681
+00:49:25,200 --> 00:49:27,760
+at the big fan companies and things like that.
+
+682
+00:49:27,760 --> 00:49:28,680
+Or whatever we call, I guess,
+
+683
+00:49:28,680 --> 00:49:31,120
+is not faying anymore 'cause they've all changed their names.
+
+684
+00:49:31,120 --> 00:49:33,160
+So I don't know what the acronym is now.
+
+685
+00:49:33,160 --> 00:49:41,160
+But yeah, so it's just wearing when that happened four days before an election, he fires most
+
+686
+00:49:41,160 --> 00:49:44,360
+of his content moderators things like that.
+
+687
+00:49:44,360 --> 00:49:48,440
+So we just, his companies are bigger than countries.
+
+688
+00:49:48,440 --> 00:49:55,760
+So they're the ones, but SMBs are still growing like 12% because they're used to being,
+
+689
+00:49:55,760 --> 00:50:01,520
+you know, more frugal and, you know, growing, but they're growing slowly, not growing dramatically.
+
+690
+00:50:01,520 --> 00:50:05,080
+They're not being irresponsible.
+
+691
+00:50:05,080 --> 00:50:06,480
+B2B seems to be doing well.
+
+692
+00:50:06,480 --> 00:50:09,600
+Salesforce is the only one that of the big B2B,
+
+693
+00:50:09,600 --> 00:50:11,040
+maybe you call straight B2B,
+
+694
+00:50:11,040 --> 00:50:13,080
+they had a big layoff too,
+
+695
+00:50:13,080 --> 00:50:14,880
+but it's mostly B2C.
+
+696
+00:50:14,880 --> 00:50:18,760
+Advertising is getting less.
+
+697
+00:50:18,760 --> 00:50:20,320
+I don't know if that will make the internet better
+
+698
+00:50:20,320 --> 00:50:21,880
+for everyone or not.
+
+699
+00:50:21,880 --> 00:50:25,440
+Like that's the first marketing is always first thing cut.
+
+700
+00:50:25,440 --> 00:50:28,920
+Community dev realm, this is gonna affect,
+
+701
+00:50:28,920 --> 00:50:30,400
+bringing it back to open source.
+
+702
+00:50:31,360 --> 00:50:33,800
+DevRel is one of the hardest jobs to measure.
+
+703
+00:50:33,800 --> 00:50:37,840
+So they often get, I just did across across my neck,
+
+704
+00:50:37,840 --> 00:50:38,680
+but it's podcast.
+
+705
+00:50:38,680 --> 00:50:43,320
+So I should probably say that I did a very able assemble
+
+706
+00:50:43,320 --> 00:50:44,520
+that I shouldn't have done either.
+
+707
+00:50:44,520 --> 00:50:48,960
+They get cut by I shouldn't have done it either.
+
+708
+00:50:48,960 --> 00:50:50,920
+Yeah, it's a weird time right now.
+
+709
+00:50:50,920 --> 00:50:52,080
+No, that's true.
+
+710
+00:50:52,080 --> 00:50:53,160
+But--
+
+711
+00:50:53,160 --> 00:50:57,200
+So we touched on accessibility earlier
+
+712
+00:50:57,200 --> 00:51:00,640
+and about the fact that something like the GitHub app
+
+713
+00:51:00,640 --> 00:51:07,440
+potentially being able to include more people.
+
+714
+00:51:07,440 --> 00:51:13,440
+And I mean, like for me, I can talk to some of this as well.
+
+715
+00:51:13,440 --> 00:51:19,640
+In South Africa, we are energy grid is severely constrained.
+
+716
+00:51:19,640 --> 00:51:24,560
+It's severely mismanaged and fraught with corruption.
+
+717
+00:51:26,760 --> 00:51:31,260
+As a result, we have these things, it's called load shitting over here, but I think people
+
+718
+00:51:31,260 --> 00:51:35,920
+know it as rolling blackouts, but it basically means that they're spurious during the day
+
+719
+00:51:35,920 --> 00:51:38,880
+where your power is just cut.
+
+720
+00:51:38,880 --> 00:51:43,640
+And depending on the stage, these different stages goes from 1 to 8.
+
+721
+00:51:43,640 --> 00:51:50,040
+You have more power cuts or less power cuts and they lost for a longer period of time.
+
+722
+00:51:50,040 --> 00:51:57,960
+Now the effect of that is multiple to small businesses, especially businesses in Massive,
+
+723
+00:51:57,960 --> 00:52:02,400
+there's a huge impact, small businesses are closing because they can operate when the
+
+724
+00:52:02,400 --> 00:52:09,040
+power is out and then they lose customers, but they still have to pay their rent at the
+
+725
+00:52:09,040 --> 00:52:12,560
+end of the month and they still have to pay their tax at the end of the month, even though
+
+726
+00:52:12,560 --> 00:52:16,560
+that text is supposed to go to maintain this darn
+
+727
+00:52:16,560 --> 00:52:20,560
+infrastructure. But
+
+728
+00:52:20,560 --> 00:52:22,560
+so
+
+729
+00:52:22,560 --> 00:52:26,560
+and the thing is one of the things that I've noticed is so
+
+730
+00:52:26,560 --> 00:52:30,560
+on a good day like right now when we're having a conversation and we have
+
+731
+00:52:30,560 --> 00:52:34,560
+electricity, I have a 5G connection and it's good. And
+
+732
+00:52:34,560 --> 00:52:38,560
+I the internet is constantly topping and I can have a video call and everything is good and
+
+733
+00:52:38,560 --> 00:52:44,320
+is good and you know it's not constantly buffering and breaking up. But when that's not the case,
+
+734
+00:52:44,320 --> 00:52:54,160
+sometimes I use my phone as a hotspot, but sometimes it drops to 3G. And for people with
+
+735
+00:52:54,160 --> 00:53:01,600
+3G access on a phone, the internet essentially does not exist. Well, as we are privileged to know
+
+736
+00:53:01,600 --> 00:53:07,440
+it nowadays, but yeah. So how we ur up with our all up basically is what you're going back to.
+
+737
+00:53:07,440 --> 00:53:18,440
+Yeah, and I think it's, I think it's largely due. And I mean, I'm, I'm, I'm guilty of it as well, even though I'm more aware of it, then most.
+
+738
+00:53:18,440 --> 00:53:31,440
+But a lot of the products are built by folks on the latest Macbooks using, you know, super fast fiber and they aren't thinking.
+
+739
+00:53:31,440 --> 00:53:39,680
+Yes, this is oh, I see where you're going. Yes, that open source and the world of tech is screwed if they don't have people
+
+740
+00:53:39,680 --> 00:53:49,680
+You know on poor internet with shitty devices flip phones or both now they're back or something. Yeah, but yeah, that is true too
+
+741
+00:53:49,680 --> 00:53:52,080
+Yeah, you need you need people involved also
+
+742
+00:53:52,080 --> 00:53:59,100
+By having the world involved you have much more easier 24 hour customer support or user support
+
+743
+00:53:59,800 --> 00:54:04,080
+There's always a business benefit and you could bring on so whoever cracks that
+
+744
+00:54:04,080 --> 00:54:07,680
+Is going to be the winner?
+
+745
+00:54:07,680 --> 00:54:14,040
+So the people that bring the next people online that was something that Mark Zuckerberg was really into for a while
+
+746
+00:54:14,040 --> 00:54:21,140
+But I haven't heard anything about it for a while his internet start up and trying to bring people online would like balloon to internet and
+
+747
+00:54:21,140 --> 00:54:22,840
+Africa and things but
+
+748
+00:54:22,840 --> 00:54:29,880
+It's definitely important because the internet saves lives. It provides medical training. It helps farmers understand
+
+749
+00:54:29,880 --> 00:54:34,820
+How to get rid get a better crop yield and be safer. Yeah, yeah, yeah
+
+750
+00:54:34,820 --> 00:54:37,440
+supports democracy
+
+751
+00:54:37,440 --> 00:54:39,440
+Yeah, if it's not controlled
+
+752
+00:54:39,440 --> 00:54:41,640
+actually for sure for sure
+
+753
+00:54:41,640 --> 00:54:46,160
+Yeah, there's so much more that we can talk about bad I know we're time constraints so
+
+754
+00:54:46,160 --> 00:54:50,200
+In closing
+
+755
+00:54:50,960 --> 00:54:56,560
+choose dance. One thing, what do you love and what are your hopes for the future?
+
+756
+00:54:56,560 --> 00:55:08,960
+About open source. Okay. Well, I just love the communities. I've been so many. And so I love
+
+757
+00:55:08,960 --> 00:55:15,360
+that aspect. I love that I've had this privilege through it to tell these stories and to mentors,
+
+758
+00:55:15,360 --> 00:55:19,520
+some university students over the last couple months about diversity, inclusion, and open source.
+
+759
+00:55:19,520 --> 00:55:23,120
+And I hope it just does better because you all need to do better.
+
+760
+00:55:23,120 --> 00:55:25,720
+So and out.
+
+761
+00:55:25,720 --> 00:55:26,960
+That's my final line.
+
+762
+00:55:26,960 --> 00:55:29,840
+You can connect with me on at Jemke Riggins on places.
+
+763
+00:55:29,840 --> 00:55:33,080
+I don't know if those places will exist by the time this publisher.
+
+764
+00:55:33,080 --> 00:55:36,440
+But yeah, so thank you so much for inviting me on this conversation.
+
+765
+00:55:36,440 --> 00:55:37,560
+Thank you so much, Jennifer.
+
+766
+00:55:37,560 --> 00:55:41,880
+I have a good, the rest of the day and a good weekend and I'll see you soon.
+
+767
+00:55:41,880 --> 00:55:42,360
+Thank you.
+
+768
+00:55:42,360 --> 00:55:43,280
+Bye.
+
+769
+00:55:43,280 --> 00:55:44,560
+Thank you so much.
+
+770
+00:55:44,560 --> 00:55:48,000
+Thank you for listening to the Mechanical Inc.
+
+771
+00:55:48,000 --> 00:55:54,080
+podcast. Join the conversation on discord. All the links are in the show notes. If you enjoyed
+
+772
+00:55:54,080 --> 00:55:58,880
+this episode, please like and share with your friends and colleagues. If you have a moment,
+
+773
+00:55:58,880 --> 00:56:04,960
+please leave a review for us on our podcasts. As this helps others find us and helps us make a
+
+774
+00:56:04,960 --> 00:56:09,360
+better podcast for you. Our listeners.
+
+775
+00:56:09,360 --> 00:56:17,360
+[Music]
+
