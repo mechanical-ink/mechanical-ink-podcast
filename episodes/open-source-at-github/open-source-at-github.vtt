@@ -1,0 +1,4409 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:07.000
+Welcome to the Mechanical Inc podcast, a collection of conversations about the open-source ecosystem.
+
+
+00:00:07.000 --> 00:00:17.000
+We speak with containers and companies that play a key role in ensuring the health and sustainability of open-source today and in the future.
+
+
+00:00:17.000 --> 00:00:23.000
+Hey Abby and May 3, thanks so much for joining me on the Mechanical Inc podcast.
+
+
+00:00:23.000 --> 00:00:24.000
+Thanks for having me.
+
+
+00:00:24.000 --> 00:00:27.000
+It's a huge pleasure.
+
+
+00:00:27.000 --> 00:00:28.360
+It's a huge pleasure.
+
+
+00:00:28.360 --> 00:00:31.600
+So to let the cat out of the bag,
+
+
+00:00:31.600 --> 00:00:33.160
+here are both from GitHub.
+
+
+00:00:33.160 --> 00:00:39.240
+And we are quite big fans to put it mildly off GitHub
+
+
+00:00:39.240 --> 00:00:41.280
+and everything that GitHub does.
+
+
+00:00:41.280 --> 00:00:44.360
+And I've known Abby for quite some time.
+
+
+00:00:44.360 --> 00:00:47.200
+And so when I started with this podcast idea
+
+
+00:00:47.200 --> 00:00:48.880
+that it's like the second what I'm doing,
+
+
+00:00:48.880 --> 00:00:50.720
+I thought like, and I heard the announcements
+
+
+00:00:50.720 --> 00:00:52.080
+at the recent GitHub universe.
+
+
+00:00:52.080 --> 00:00:55.800
+I was like, I wonder if I can make this happen.
+
+
+00:00:55.800 --> 00:01:00.000
+And so I reached out and wow, I was so pleasantly surprised
+
+
+00:01:00.000 --> 00:01:01.120
+that you were so open to this.
+
+
+00:01:01.120 --> 00:01:03.440
+So again, thank you so much for joining me.
+
+
+00:01:03.440 --> 00:01:04.600
+I really appreciate this.
+
+
+00:01:04.600 --> 00:01:07.640
+And I'm excited to share all the great stuff
+
+
+00:01:07.640 --> 00:01:10.920
+we'll talk about today with the larger community.
+
+
+00:01:10.920 --> 00:01:17.160
+With all of that said, can we get a little bit of background
+
+
+00:01:17.160 --> 00:01:20.600
+on the two of you and what your roles
+
+
+00:01:20.600 --> 00:01:23.080
+have get up in the open source ecosystem?
+
+
+00:01:25.440 --> 00:01:26.600
+Yeah, for sure.
+
+
+00:01:26.600 --> 00:01:27.960
+I think I saw.
+
+
+00:01:27.960 --> 00:01:29.200
+That's OK.
+
+
+00:01:29.200 --> 00:01:30.560
+Thanks, Deer.
+
+
+00:01:30.560 --> 00:01:32.600
+I guess, so I'm Abby Kubinak-Mays.
+
+
+00:01:32.600 --> 00:01:34.960
+I lead GitHub's open source maintainer programs
+
+
+00:01:34.960 --> 00:01:37.680
+where we engage, invest, and advocate for open source
+
+
+00:01:37.680 --> 00:01:39.160
+maintainers.
+
+
+00:01:39.160 --> 00:01:41.840
+I joined about six months ago because I really
+
+
+00:01:41.840 --> 00:01:43.480
+do want to be supporting maintainers.
+
+
+00:01:43.480 --> 00:01:46.200
+So a skull, like you mentioned, we work together at Mozilla.
+
+
+00:01:46.200 --> 00:01:49.480
+So it's so great to reconnect here.
+
+
+00:01:49.480 --> 00:01:52.320
+But I actually started my career in cancer research.
+
+
+00:01:52.320 --> 00:01:55.440
+So I was writing web apps for scientists
+
+
+00:01:55.440 --> 00:01:58.640
+so that they could do some data analysis and data visualization.
+
+
+00:01:58.640 --> 00:02:01.040
+And this was a really meaningful work for me.
+
+
+00:02:01.040 --> 00:02:02.840
+My grandmother passed away from cancer.
+
+
+00:02:02.840 --> 00:02:05.960
+It's this idea that I was helping someone else's grandmother
+
+
+00:02:05.960 --> 00:02:08.280
+was, yeah, really powerful.
+
+
+00:02:08.280 --> 00:02:11.720
+But the longer it was there, the more I realized how often
+
+
+00:02:11.720 --> 00:02:14.160
+researchers sometimes fudge their data a bit
+
+
+00:02:14.160 --> 00:02:16.840
+or maybe not even share it, just to further their own career
+
+
+00:02:16.840 --> 00:02:19.120
+and get cool discoveries out there.
+
+
+00:02:19.120 --> 00:02:22.960
+And I found that that was outraging.
+
+
+00:02:22.960 --> 00:02:27.560
+That's why now I care so much about open source and open science.
+
+
+00:02:27.560 --> 00:02:31.920
+I think the best innovations happen when we are doing things in the open and
+
+
+00:02:31.920 --> 00:02:33.240
+sharing the results that we have.
+
+
+00:02:33.240 --> 00:02:36.840
+So since then I've spent my career really supporting the open source ecosystem
+
+
+00:02:36.840 --> 00:02:39.800
+both for scientists and now more broadly.
+
+
+00:02:39.800 --> 00:02:45.640
+And through this work I've seen that maintainers have truly an outsized impact on the space.
+
+
+00:02:45.640 --> 00:02:47.720
+They shape how the kidneys collaborate.
+
+
+00:02:47.720 --> 00:02:49.960
+They're the ones that they're securing funding often.
+
+
+00:02:49.960 --> 00:02:52.100
+They're the ones that ensure that the project's
+
+
+00:02:52.100 --> 00:02:53.840
+functions sustainably.
+
+
+00:02:53.840 --> 00:02:56.400
+So I'm really excited to be here at GitHub
+
+
+00:02:56.400 --> 00:02:58.320
+where I'm in a role where I can truly
+
+
+00:02:58.320 --> 00:02:59.760
+be supporting those maintainers
+
+
+00:02:59.760 --> 00:03:01.840
+and helping more of this open source happen.
+
+
+00:03:01.840 --> 00:03:04.960
+- Yeah, that's wonderful.
+
+
+00:03:04.960 --> 00:03:07.380
+I had no idea about your early start.
+
+
+00:03:07.380 --> 00:03:09.880
+Yeah, that's really interesting.
+
+
+00:03:09.880 --> 00:03:11.120
+Thanks for sharing.
+
+
+00:03:11.120 --> 00:03:14.280
+- Yeah, so for me, I came to GitHub
+
+
+00:03:14.280 --> 00:03:15.960
+about four years ago.
+
+
+00:03:15.960 --> 00:03:18.980
+And I had always sort of been involved in open source
+
+
+00:03:18.980 --> 00:03:20.520
+on the adjacency level.
+
+
+00:03:20.520 --> 00:03:24.480
+So I was running an engineering team,
+
+
+00:03:24.480 --> 00:03:25.920
+talented my former employer.
+
+
+00:03:25.920 --> 00:03:30.920
+And we were using a ton of Cassandra frameworks and software.
+
+
+00:03:30.920 --> 00:03:32.880
+And I remember there was this point in the middle of the night
+
+
+00:03:32.880 --> 00:03:34.440
+and London one day, and we were like,
+
+
+00:03:34.440 --> 00:03:37.360
+we don't know what the hell we're doing actually.
+
+
+00:03:37.360 --> 00:03:39.280
+Maybe we should get someone who's an expert
+
+
+00:03:39.280 --> 00:03:41.400
+that we can actually talk to.
+
+
+00:03:41.400 --> 00:03:43.440
+And we realized that we had no one
+
+
+00:03:43.440 --> 00:03:45.920
+that we could actually reach out to.
+
+
+00:03:45.920 --> 00:03:47.720
+And I remember going to GitHub and saying,
+
+
+00:03:47.720 --> 00:03:49.320
+"Oh, there's one contributor.
+
+
+00:03:49.320 --> 00:03:51.160
+"Maybe they'll speak to us.
+
+
+00:03:51.160 --> 00:03:52.280
+"Let's reach out."
+
+
+00:03:52.280 --> 00:03:55.040
+And there was this whole shenanigans
+
+
+00:03:55.040 --> 00:03:57.480
+around how we were going to contact this person.
+
+
+00:03:57.480 --> 00:03:58.560
+Finally got them online.
+
+
+00:03:58.560 --> 00:04:00.440
+We will literally do anything.
+
+
+00:04:00.440 --> 00:04:02.600
+If you will just spend an hour with us, please.
+
+
+00:04:02.600 --> 00:04:05.520
+And they were ended up being really helpful
+
+
+00:04:05.520 --> 00:04:07.760
+and helping push our product forward.
+
+
+00:04:07.760 --> 00:04:09.240
+And I remember that.
+
+
+00:04:09.240 --> 00:04:13.360
+And so when GitHub was acquired by Microsoft back in 2018,
+
+
+00:04:13.360 --> 00:04:15.360
+I joined as part of the new leadership team.
+
+
+00:04:15.360 --> 00:04:18.520
+I was chief of staff to the CEO, not three men.
+
+
+00:04:18.520 --> 00:04:21.920
+And really my biggest passion for joining
+
+
+00:04:21.920 --> 00:04:24.440
+was how do we get the open source community out front
+
+
+00:04:24.440 --> 00:04:26.080
+and center, how do we support them,
+
+
+00:04:26.080 --> 00:04:29.120
+how do we actually build so that like Abby was saying,
+
+
+00:04:29.120 --> 00:04:31.960
+all of these maintainers really have the tools that they need
+
+
+00:04:31.960 --> 00:04:33.600
+as well as the support that they need
+
+
+00:04:33.600 --> 00:04:35.240
+to be super successful.
+
+
+00:04:35.240 --> 00:04:39.440
+Because like Abby, I believe that open source
+
+
+00:04:39.440 --> 00:04:40.800
+really does push us forward.
+
+
+00:04:40.800 --> 00:04:42.400
+We're not all doing the same work.
+
+
+00:04:42.400 --> 00:04:44.280
+In fact, we can all leverage each other.
+
+
+00:04:44.280 --> 00:04:47.520
+So it's the biggest team sport that I can think of across the globe.
+
+
+00:04:47.520 --> 00:04:50.960
+And so I was cheap as to that.
+
+
+00:04:50.960 --> 00:04:53.440
+We did a ton of different initiatives like GitHub sponsors,
+
+
+00:04:53.440 --> 00:04:54.840
+and sure we'll get into that later.
+
+
+00:04:54.840 --> 00:04:59.880
+And then now I'm working within the CEO's office for
+
+
+00:04:59.880 --> 00:05:05.000
+Thomas, who's our new GitHub CEO, and really focused on the open source economy.
+
+
+00:05:05.000 --> 00:05:07.720
+So how do we get the right players,
+
+
+00:05:07.720 --> 00:05:12.240
+both from the company side as well as the developer side matched up and
+
+
+00:05:12.240 --> 00:05:18.000
+working together so that open source not only can survive over the next decade, but really thrive.
+
+
+00:05:18.000 --> 00:05:23.840
+And so that's kind of the focus and why we've launched these last two programs that Skolke
+
+
+00:05:23.840 --> 00:05:29.280
+just talked about, the accelerator and the fund. And I'm sure we'll get into it just now. So
+
+
+00:05:29.280 --> 00:05:35.680
+that's clever. The background on me. Great. Yeah, thanks. That's exciting. Yeah, for sure.
+
+
+00:05:35.680 --> 00:05:41.760
+No, I also definitely want open source ecosystem to thrive. And I do feel like GitHub is playing
+
+
+00:05:41.760 --> 00:05:49.040
+a key role there and talking to that, I think one of the announcements, one of the many
+
+
+00:05:49.040 --> 00:05:58.080
+announcements that was made during the universe in 2022, I believe that's the year, is in,
+
+
+00:05:58.080 --> 00:06:01.360
+so there's a couple of ones. So one of the ones is where you're literally investing in the
+
+
+00:06:01.360 --> 00:06:06.480
+stack that you depend on and that is really cool. You don't often see that and I think,
+
+
+00:06:06.480 --> 00:06:12.800
+I hope that's it's a precedent for the industry to like take note that you know it's it's it's the thing you should do
+
+
+00:06:12.800 --> 00:06:20.240
+If you're relying on open source to build your business then you really should invest back into into your own stack at the very least
+
+
+00:06:20.240 --> 00:06:24.720
+But get up of course it's going above and beyond that and we'll dig into some of those things
+
+
+00:06:24.720 --> 00:06:31.360
+But I know some of the stuff that kicked all of this off was a pilot program that was run in India called OAS grants
+
+
+00:06:31.360 --> 00:06:36.200
+I'm curious if you can share anything about the experience of running that program and
+
+
+00:06:36.200 --> 00:06:40.720
+if there's any specific lessons that came out of that that then influence all these
+
+
+00:06:40.720 --> 00:06:42.000
+new initiatives.
+
+
+00:06:42.000 --> 00:06:49.440
+Yeah, so Karin who sits in the GitHub DevRal team really brought that program to life.
+
+
+00:06:49.440 --> 00:06:52.200
+He was super instrumental.
+
+
+00:06:52.200 --> 00:06:57.600
+One of the biggest learnings was sometimes developers just need the time and the space
+
+
+00:06:57.600 --> 00:06:59.560
+to go experiment.
+
+
+00:06:59.560 --> 00:07:03.600
+a maintainer often what happened is you threw something out there that scratched your own
+
+
+00:07:03.600 --> 00:07:07.080
+edge and you're like, "Well, I'm going to give this back to the community."
+
+
+00:07:07.080 --> 00:07:12.880
+And then fast forward six months later, you get 20 issues a day of people asking you
+
+
+00:07:12.880 --> 00:07:15.120
+to do this or do that.
+
+
+00:07:15.120 --> 00:07:18.080
+And you're thinking to yourself, "Gosh, I really love this project.
+
+
+00:07:18.080 --> 00:07:19.760
+I very much want to work on it."
+
+
+00:07:19.760 --> 00:07:26.440
+But I also have a full-time job and a family and a life and this impending doom of issue
+
+
+00:07:26.440 --> 00:07:31.840
+this is just coming over the edge and kind of crushing me under the weight.
+
+
+00:07:31.840 --> 00:07:35.560
+And so, you know, you often see maintainers have these almost apology posts.
+
+
+00:07:35.560 --> 00:07:36.800
+And I'm like, don't apologize.
+
+
+00:07:36.800 --> 00:07:38.600
+You're doing something great for us.
+
+
+00:07:38.600 --> 00:07:39.840
+So they need the time.
+
+
+00:07:39.840 --> 00:07:43.440
+They need this face to actually say, well, what if this could be something real?
+
+
+00:07:43.440 --> 00:07:44.440
+What should I be doing?
+
+
+00:07:44.440 --> 00:07:49.320
+And, you know, GitHub doesn't want to be the person who's telling everyone this is how
+
+
+00:07:49.320 --> 00:07:50.920
+the market should work.
+
+
+00:07:50.920 --> 00:07:54.560
+And so the, oh, as grants program was really an experiment.
+
+
+00:07:54.560 --> 00:07:57.320
+It was like, well, if we just gave you the money,
+
+
+00:07:57.320 --> 00:07:58.920
+so you would have the time.
+
+
+00:07:58.920 --> 00:08:00.440
+What happens next?
+
+
+00:08:00.440 --> 00:08:02.120
+And I think one of the coolest things
+
+
+00:08:02.120 --> 00:08:05.200
+that came out of that program was two of the maintainers.
+
+
+00:08:05.200 --> 00:08:06.240
+I'll just use two as a example.
+
+
+00:08:06.240 --> 00:08:10.080
+They were 20 in the group, but two were sort of stuck out.
+
+
+00:08:10.080 --> 00:08:13.480
+Peter Thomas, who runs Karate Labs, and Leis Thomas,
+
+
+00:08:13.480 --> 00:08:18.480
+who runs no relation, totally different people and families.
+
+
+00:08:18.480 --> 00:08:22.520
+Leis Thomas, who runs hot scotch now, both came out of that
+
+
+00:08:22.520 --> 00:08:27.720
+program and then ended up doing other things and raising money, joining YC, becoming full
+
+
+00:08:27.720 --> 00:08:34.040
+flood, open source companies. And that was really exciting to us. And we thought, well,
+
+
+00:08:34.040 --> 00:08:39.960
+if more people had this and you had more examples, and not just examples that were going into
+
+
+00:08:39.960 --> 00:08:47.320
+venture backed startup paths, we could really paint a path for more maintainers that you don't
+
+
+00:08:47.320 --> 00:08:51.960
+have to just feel crushed by the weight of the expectations of the community, and then doing this
+
+
+00:08:51.960 --> 00:08:58.200
+on nights and weekends, but you could actually make this a full-time career or make this a full-time
+
+
+00:08:58.200 --> 00:09:03.240
+company. We wanted to start with an experiment. We also started in India because it's the fastest
+
+
+00:09:03.240 --> 00:09:11.720
+growing geography for GitHub. We've added more developers in India in the last year than there were
+
+
+00:09:11.720 --> 00:09:19.960
+on GitHub in 2012, 10 years ago, which is really quite stark from a single region. We were excited
+
+
+00:09:19.960 --> 00:09:25.640
+about being able to support this and then also going global. And so it really became kind of the
+
+
+00:09:25.640 --> 00:09:30.760
+the seed crystal or the impetus for us building out a more full-fledged program with the GitHub
+
+
+00:09:30.760 --> 00:09:36.440
+accelerator, which we launched back at universe a couple of weeks ago here. Yeah, it's very interesting.
+
+
+00:09:36.440 --> 00:09:41.800
+Anything you'd like to add to that, Abby? Well, I was just going to say it is really interesting to see,
+
+
+00:09:41.800 --> 00:09:48.040
+yes, seeing the engagement in India specifically. I know they had the longest wait list for sponsors.
+
+
+00:09:48.600 --> 00:09:57.160
+So when it was launched, it suddenly, I know, yeah, there are some of the top people on sponsors now.
+
+
+00:09:57.160 --> 00:09:59.800
+So it's exciting just to see it grow and see this expand.
+
+
+00:09:59.800 --> 00:10:04.280
+That's great. Yeah, so actually, I wonder if I'm...
+
+
+00:10:04.280 --> 00:10:10.200
+No, no, go for it, go for it. Oh, sorry, it's called. I wonder if, I wonder if it makes sense for
+
+
+00:10:10.200 --> 00:10:15.320
+us to talk a little bit about the journey here because I would say, you know, OS grants was
+
+
+00:10:15.320 --> 00:10:21.720
+sort of our first experiment on a program side. But back in 2019 was our first big experiment
+
+
+00:10:21.720 --> 00:10:29.720
+in this space. We launched sponsors which you go to any GitHub profile that has sponsors turned
+
+
+00:10:29.720 --> 00:10:34.760
+on. You can actually just with a single click next to the code that you're using go and sponsor
+
+
+00:10:34.760 --> 00:10:41.240
+developer, whether that it's you as an individual. And we also have a beta program right now for
+
+
+00:10:41.240 --> 00:10:47.800
+companies to go do that. And what we've seen over the last three years is so many people want to be
+
+
+00:10:47.800 --> 00:10:52.440
+able to do this. I mean, I think people were sort of kind of Frankenstein monstering this
+
+
+00:10:52.440 --> 00:10:57.800
+together, right? Like open collective and so many other companies in the space are also doing
+
+
+00:10:57.800 --> 00:11:04.440
+this to support maintainers out there. But it's always, you know, you go to the website and people
+
+
+00:11:04.440 --> 00:11:09.000
+like, well, you can buy me a cup of coffee and like, this will help me sort of fuel my my night
+
+
+00:11:09.000 --> 00:11:14.360
+work this day or that day. And what sponsors, what we really wanted to formalize was this idea that
+
+
+00:11:14.360 --> 00:11:18.440
+you should be working in open source. It should be out in the open, but it shouldn't be
+
+
+00:11:18.440 --> 00:11:23.080
+you know, completely unpaid. It shouldn't be something that we expect from you
+
+
+00:11:23.080 --> 00:11:28.760
+just because you happen to have donated your your prior time and energy and talent
+
+
+00:11:28.760 --> 00:11:34.520
+to the community. And so sponsors has really had this great rise over the last three years. We've
+
+
+00:11:34.520 --> 00:11:38.440
+you've seen a ton of different examples of people experimenting.
+
+
+00:11:38.440 --> 00:11:43.480
+You know, Caleb Porzio is one person, he's done a couple of podcasts and things, you
+
+
+00:11:43.480 --> 00:11:49.240
+definitely check them out. But you know, he sort of came on a sponsor's and 2019-2020,
+
+
+00:11:49.240 --> 00:11:53.320
+I want to say. And his objective was like, well, can I make $100,000 a year? Can I
+
+
+00:11:53.320 --> 00:11:58.760
+replace my paycheck for my employer on sponsors? And very rapidly, he actually did.
+
+
+00:11:58.760 --> 00:12:04.200
+And I remember seeing that example and just getting such a surge of energy, I was like,
+
+
+00:12:04.200 --> 00:12:07.440
+"Wow, okay, you should be able to do this."
+
+
+00:12:07.440 --> 00:12:09.700
+And there have been other people
+
+
+00:12:09.700 --> 00:12:11.560
+who have been using sponsor as Cindra,
+
+
+00:12:11.560 --> 00:12:13.440
+who is a very long time,
+
+
+00:12:13.440 --> 00:12:16.040
+Ghehaep contributor maintainer, developer.
+
+
+00:12:16.040 --> 00:12:17.360
+He's very active in the community,
+
+
+00:12:17.360 --> 00:12:18.560
+yes, some of the most,
+
+
+00:12:18.560 --> 00:12:21.640
+he is I think the highest count of sponsors overall.
+
+
+00:12:21.640 --> 00:12:26.640
+And you also see folks like M&U from VJS,
+
+
+00:12:26.640 --> 00:12:29.760
+who has built an incredible community,
+
+
+00:12:29.760 --> 00:12:33.280
+an incredible organization that is really making sure
+
+
+00:12:33.280 --> 00:12:38.160
+that view has both resiliency and sustainability outside of just his
+
+
+00:12:38.160 --> 00:12:42.160
+contributions, which I find to be really interesting. And so sponsors has gone
+
+
+00:12:42.160 --> 00:12:46.600
+through this really great journey over the last three years. And then with OS
+
+
+00:12:46.600 --> 00:12:50.280
+grants, you know, the kind of lesson that we're learning is you just need more
+
+
+00:12:50.280 --> 00:12:54.240
+of them. Like we need more kind of tinkering and experimentation in this
+
+
+00:12:54.240 --> 00:12:59.080
+space. And in some ways GitHub, we just want to be the matchmaker. Like, okay,
+
+
+00:12:59.080 --> 00:13:03.000
+you want to go do this. Here are the four or five mentors that you can go talk
+
+
+00:13:03.000 --> 00:13:07.640
+to and then here are the four or five profiles that you should be able to just fork and create
+
+
+00:13:07.640 --> 00:13:14.040
+as your sponsors profile. And then here are the, you know, several companies that depend on your
+
+
+00:13:14.040 --> 00:13:20.840
+software today and in some ways like your SangSkulk, you know, actually give back because the software
+
+
+00:13:20.840 --> 00:13:26.520
+that you created powers their products that they make, you know, thousands or millions or billions
+
+
+00:13:26.520 --> 00:13:32.040
+of dollars off of. And that volunteer work should be recognized and appreciated and maintained
+
+
+00:13:32.040 --> 00:13:38.440
+over time. So you know we've gone through the sponsors trajectory and now we're
+
+
+00:13:38.440 --> 00:13:43.000
+sort of coming back and saying what are the small, cool experiments that we can do to give developers
+
+
+00:13:43.000 --> 00:13:53.080
+that time to really focus on their open source projects. Yeah and Skulk I know you mentioned bulk
+
+
+00:13:53.080 --> 00:13:57.720
+sponsorships a little bit at the beginning and we did experiment with that back in June as
+
+
+00:13:57.720 --> 00:14:01.880
+part of maintainer month, just we had half a million dollars and we wanted to see Canvias
+
+
+00:14:01.880 --> 00:14:08.440
+GitHub distribute this to all our dependencies. So we found all the dependencies that GitHub
+
+
+00:14:08.440 --> 00:14:13.400
+as the org and all of our other orgs we have a lot of them uses and there are 900 dependencies
+
+
+00:14:13.400 --> 00:14:18.040
+that had sponsors turned on. So we just split the money evenly between all of them and part of
+
+
+00:14:18.040 --> 00:14:23.080
+doing that was like writing some tooling so that we could actually get the money everywhere
+
+
+00:14:23.080 --> 00:14:25.480
+because it was quite a manual process before.
+
+
+00:14:25.480 --> 00:14:28.920
+And so now because of that, like bulk sponsorships is on the way.
+
+
+00:14:28.920 --> 00:14:34.600
+So I'm excited to see this expand both with investing in these individual maintainers,
+
+
+00:14:34.600 --> 00:14:39.240
+but also encouraging companies to yet pay for your stack or give money back to your stack.
+
+
+00:14:39.240 --> 00:14:43.480
+Yeah, that's wonderful. I love this this way that GitHub,
+
+
+00:14:43.480 --> 00:14:48.920
+at Mozilla they call it Fox feeding. I don't know if you call it
+
+
+00:14:48.920 --> 00:14:50.920
+Octocat feeding or what?
+
+
+00:14:50.920 --> 00:14:50.920
+What?
+
+
+00:14:50.920 --> 00:14:52.920
+Get up.
+
+
+00:14:52.920 --> 00:14:56.920
+But where you use your own product, right?
+
+
+00:14:56.920 --> 00:14:58.920
+And your own,
+
+
+00:14:58.920 --> 00:15:02.920
+everything, like, kind of organically grows out of the need,
+
+
+00:15:02.920 --> 00:15:04.920
+a need at get up that you then fall
+
+
+00:15:04.920 --> 00:15:06.920
+and then give to the community and say,
+
+
+00:15:06.920 --> 00:15:08.920
+we found this useful, we'll,
+
+
+00:15:08.920 --> 00:15:10.920
+we'll pretty sure you'll find it useful as well.
+
+
+00:15:10.920 --> 00:15:12.920
+I love that organic growth of get up.
+
+
+00:15:12.920 --> 00:15:16.920
+A couple of things that you've mentioned actually leads me to a different topic
+
+
+00:15:16.920 --> 00:15:20.920
+different topic that I was thinking of touching on later, but I think it's a good place to do it now.
+
+
+00:15:20.920 --> 00:15:32.920
+And so it's, I think India in terms of the regional challenges that they face and also the growth that you've mentioned.
+
+
+00:15:32.920 --> 00:15:40.920
+I think Africa resembles that very much. There's a lot of similarities between these two countries, continents, whatever you want to call it.
+
+
+00:15:40.920 --> 00:15:44.920
+And I think this idea that...
+
+
+00:15:44.920 --> 00:15:48.780
+So the reason why I'm bringing this up,
+
+
+00:15:48.780 --> 00:15:50.480
+let me stay back a little bit.
+
+
+00:15:50.480 --> 00:15:53.160
+So I've recently found,
+
+
+00:15:53.160 --> 00:15:54.680
+so these two different statistics,
+
+
+00:15:54.680 --> 00:15:56.120
+I'll talk about the second one a bit later,
+
+
+00:15:56.120 --> 00:15:59.880
+but of all open source contributions,
+
+
+00:15:59.880 --> 00:16:02.440
+only 3% comes from Africa.
+
+
+00:16:02.440 --> 00:16:05.560
+And if you think about the fact that 17%
+
+
+00:16:05.560 --> 00:16:07.520
+of the world's population live in Africa,
+
+
+00:16:07.520 --> 00:16:10.720
+then it's kind of mind boggling to think why it's
+
+
+00:16:10.720 --> 00:16:14.200
+such a small percentage of contributions come from the content of Africa.
+
+
+00:16:14.200 --> 00:16:18.120
+But it is for the very reasons that you have highlighted.
+
+
+00:16:18.120 --> 00:16:23.760
+For people in Africa, number one is getting a job and number two is getting enough
+
+
+00:16:23.760 --> 00:16:25.760
+money to be able to put food on the table.
+
+
+00:16:25.760 --> 00:16:31.320
+And if you have any time left after all of that, you might consider contributing
+
+
+00:16:31.320 --> 00:16:32.080
+to open source.
+
+
+00:16:32.080 --> 00:16:36.960
+If you have the energy and if you have access to stable infrastructure,
+
+
+00:16:37.000 --> 00:16:42.000
+which means power, internet and access to hardware.
+
+
+00:16:42.000 --> 00:16:48.160
+So, if somebody in Africa had to start an open source project,
+
+
+00:16:48.160 --> 00:16:53.160
+it would be very hard for them to maintain that long term
+
+
+00:16:53.160 --> 00:16:54.760
+if they get traction on it,
+
+
+00:16:54.760 --> 00:16:57.800
+simply because they won't be able to quit their day job
+
+
+00:16:57.800 --> 00:16:59.120
+and do this.
+
+
+00:16:59.120 --> 00:17:01.080
+They won't be able to say, "I'm gonna quit my job."
+
+
+00:17:01.080 --> 00:17:04.240
+And they'll have to burn the midnight oil,
+
+
+00:17:04.240 --> 00:17:06.960
+so to speak, and they'll be in the candle at both ends.
+
+
+00:17:06.960 --> 00:17:11.200
+because they'll have to go to the day job, make the money to put food in the table, and then
+
+
+00:17:11.200 --> 00:17:18.480
+after hours spend time working on this project. And I think things are getting better
+
+
+00:17:18.480 --> 00:17:25.360
+so in terms of how people view open-source. And I think language is very important here. That's why I
+
+
+00:17:25.360 --> 00:17:33.840
+like this name of Ventures and sponsors because I think people it shouldn't be like a donation
+
+
+00:17:34.320 --> 00:17:38.160
+because I like the idea of teaching people to fish instead of giving them a fish.
+
+
+00:17:38.160 --> 00:17:43.920
+So I think that builds continuity and that helps people grow.
+
+
+00:17:43.920 --> 00:17:47.360
+Because later on you can pass it on to the next person.
+
+
+00:17:47.360 --> 00:17:49.920
+If you've learned and you've grown and you've learned to fish,
+
+
+00:17:49.920 --> 00:17:52.240
+you can teach the next person out of fish.
+
+
+00:17:52.240 --> 00:17:54.400
+Instead of if you just get a bunch of money and it's like,
+
+
+00:17:54.400 --> 00:18:01.520
+"Oh, nice, people tend to also not spend it very wisely if you get it, if it's too easy."
+
+
+00:18:01.520 --> 00:18:08.640
+So what I'm getting at with all of that is I think these initiatives that get up is starting.
+
+
+00:18:08.640 --> 00:18:13.520
+I know there was some negativity towards it because keep money out of open source, but I think
+
+
+00:18:13.520 --> 00:18:18.400
+that's the wrong attitude. I think it's one of the things that open source has been missing
+
+
+00:18:18.400 --> 00:18:25.440
+is real monetary investment in this space. So I'll, you know, stand the line and say that I think
+
+
+00:18:25.440 --> 00:18:34.560
+what get up is doing is the right thing. I'm curious what ideas you have for the African
+
+
+00:18:34.560 --> 00:18:40.960
+context and similar countries, not just Africa, and how you think these initiatives that get
+
+
+00:18:40.960 --> 00:18:47.440
+up as driving can really impact and allow people in these regions to maybe double that percentage
+
+
+00:18:47.440 --> 00:18:56.800
+from 3 to 6%. Yeah, I mean, I can jump in and take this one. So, I think, you know, I'm super
+
+
+00:18:56.800 --> 00:19:04.480
+passionate about this back in 2019. I took a trip with the GitHub leadership team to Lagos
+
+
+00:19:04.480 --> 00:19:09.760
+in Nigeria. And that's only one part of a very large continent. So it's obviously a window into
+
+
+00:19:09.760 --> 00:19:16.560
+that world, but not the full picture. And the overwhelming feel of the place was everyone who's
+
+
+00:19:16.560 --> 00:19:21.360
+involved with open source, being involved because of the community, the amount of learning
+
+
+00:19:21.360 --> 00:19:27.040
+that they were able to engage with, the actual opportunities that it then created, you know,
+
+
+00:19:27.040 --> 00:19:31.520
+whether that was job opportunities or other companies that they could join and found together.
+
+
+00:19:31.520 --> 00:19:35.920
+But at the end of the day, everyone said exactly what you said, Skolk, which is,
+
+
+00:19:35.920 --> 00:19:41.440
+"I need a day job." You know, I don't have the wherewithal, the privilege to be able to not
+
+
+00:19:41.440 --> 00:19:43.740
+to take a paycheck.
+
+
+00:19:43.740 --> 00:19:46.680
+And open sources allowed me to be discovered,
+
+
+00:19:46.680 --> 00:19:49.960
+but it is not the place where I can actually build a career.
+
+
+00:19:49.960 --> 00:19:52.600
+And that really bothered me.
+
+
+00:19:52.600 --> 00:19:55.720
+Because at the end of the day, all of us building
+
+
+00:19:55.720 --> 00:19:58.960
+and clothes silos at companies doesn't quite
+
+
+00:19:58.960 --> 00:20:01.360
+further our joint mission.
+
+
+00:20:01.360 --> 00:20:03.000
+There's a lot of rework in that.
+
+
+00:20:03.000 --> 00:20:06.800
+There's a lot of duplicative efforts.
+
+
+00:20:06.800 --> 00:20:09.800
+And so one of the main objectives about the accelerator--
+
+
+00:20:09.800 --> 00:20:12.220
+And if I can just sort of kind of take a step back
+
+
+00:20:12.220 --> 00:20:14.900
+and explain parts of that accelerator,
+
+
+00:20:14.900 --> 00:20:18.720
+is we as GitHub want to start really small
+
+
+00:20:18.720 --> 00:20:20.960
+with a specific set of folks
+
+
+00:20:20.960 --> 00:20:24.280
+where we can really show irrespective of geography,
+
+
+00:20:24.280 --> 00:20:28.320
+irrespective of career level, irrespective of,
+
+
+00:20:28.320 --> 00:20:31.920
+you know, the connections and the people that you know,
+
+
+00:20:31.920 --> 00:20:35.600
+you have an ability to be connected to the internet
+
+
+00:20:35.600 --> 00:20:39.000
+and build a project that can be your livelihood.
+
+
+00:20:39.000 --> 00:20:42.760
+you know, there's no boundaries as far as open source go.
+
+
+00:20:42.760 --> 00:20:45.960
+It's a global community that you can access anywhere.
+
+
+00:20:45.960 --> 00:20:49.640
+And so, you know, one part of the accelerator is,
+
+
+00:20:49.640 --> 00:20:51.280
+we're gonna put our money where our mouth is
+
+
+00:20:51.280 --> 00:20:53.120
+for the 10 weeks that you're with us.
+
+
+00:20:53.120 --> 00:20:56.200
+We're gonna actually pay and give you a stipend
+
+
+00:20:56.200 --> 00:20:58.640
+so that you can support your life in whatever way
+
+
+00:20:58.640 --> 00:21:01.560
+and actually have the choice of doing this full time.
+
+
+00:21:01.560 --> 00:21:04.440
+And then on the other side of it, you know,
+
+
+00:21:04.440 --> 00:21:07.360
+you get connected to this global community of mentors
+
+
+00:21:07.360 --> 00:21:10.080
+that you might not be able to meet
+
+
+00:21:10.080 --> 00:21:13.320
+if you're running the streets of Legos or Joe Rigg
+
+
+00:21:13.320 --> 00:21:15.600
+or wherever you are.
+
+
+00:21:15.600 --> 00:21:18.200
+But you actually, we're all in the cloud now.
+
+
+00:21:18.200 --> 00:21:20.720
+We don't actually live anywhere.
+
+
+00:21:20.720 --> 00:21:25.720
+And so you can actually build a business or build a career
+
+
+00:21:25.720 --> 00:21:30.240
+without any barriers based on your location.
+
+
+00:21:30.240 --> 00:21:32.280
+So I think that's one big part of it.
+
+
+00:21:32.280 --> 00:21:35.120
+Ezra Lobby, who actually met on that trip,
+
+
+00:21:35.120 --> 00:21:37.280
+who was the CTO of Paystack,
+
+
+00:21:37.280 --> 00:21:41.780
+it's a YC backed company that's Fintech now in my stripe.
+
+
+00:21:41.780 --> 00:21:45.620
+But they really showed a great example
+
+
+00:21:45.620 --> 00:21:47.720
+of what this could look like.
+
+
+00:21:47.720 --> 00:21:49.300
+They started out in Lagos
+
+
+00:21:49.300 --> 00:21:51.980
+and are a globally competitive company
+
+
+00:21:51.980 --> 00:21:54.460
+within the stripe family.
+
+
+00:21:54.460 --> 00:21:59.260
+So I think that was a big part of what this accelerator is about.
+
+
+00:21:59.260 --> 00:22:01.100
+And I hope that many of the participants
+
+
+00:22:01.100 --> 00:22:03.700
+aren't from the classical backgrounds of people
+
+
+00:22:03.700 --> 00:22:07.540
+in the US where I am or Western Europe,
+
+
+00:22:07.540 --> 00:22:09.380
+but actually kind of span the globe
+
+
+00:22:09.380 --> 00:22:11.540
+because it is a global talent marketplace.
+
+
+00:22:11.540 --> 00:22:14.580
+And I don't think that that should be a barrier
+
+
+00:22:14.580 --> 00:22:17.500
+to whether or not you can contribute
+
+
+00:22:17.500 --> 00:22:19.620
+and you can build a career here.
+
+
+00:22:19.620 --> 00:22:24.620
+So definitely a big, my resounding feel right now is,
+
+
+00:22:24.620 --> 00:22:26.180
+yes, I agree.
+
+
+00:22:26.180 --> 00:22:29.500
+And so we should be doing something about this overall.
+
+
+00:22:31.180 --> 00:22:34.300
+So Abby, I know that you're, as you mentioned earlier,
+
+
+00:22:34.300 --> 00:22:37.460
+actually your head of the open source maintainer program.
+
+
+00:22:37.460 --> 00:22:42.100
+And I learned about that by accident kind of,
+
+
+00:22:42.100 --> 00:22:43.820
+through the grapevine.
+
+
+00:22:43.820 --> 00:22:47.060
+And when I learned more about what exactly that is,
+
+
+00:22:47.060 --> 00:22:49.780
+I was like, wow, this is really cool.
+
+
+00:22:49.780 --> 00:22:52.660
+I didn't know I had no idea how to get up does this.
+
+
+00:22:52.660 --> 00:22:54.540
+So I would love you to tell us a little bit more
+
+
+00:22:54.540 --> 00:22:57.300
+about what that program is and how submitted
+
+
+00:22:57.300 --> 00:23:00.420
+or some organization or whatever on get up
+
+
+00:23:00.420 --> 00:23:02.860
+can become part of that program.
+
+
+00:23:02.860 --> 00:23:05.360
+Yeah, of course.
+
+
+00:23:05.360 --> 00:23:07.360
+Yeah, did you learn from the MOSVET Slack?
+
+
+00:23:07.360 --> 00:23:08.360
+I'm assuming.
+
+
+00:23:08.360 --> 00:23:09.600
+Exactly.
+
+
+00:23:09.600 --> 00:23:14.340
+So yeah, we do have a set of programs that engage different types of open source
+
+
+00:23:14.340 --> 00:23:15.340
+maintainers on GitHub.
+
+
+00:23:15.340 --> 00:23:19.880
+We are still building out a lot of this work, but right now we're doing a lot
+
+
+00:23:19.880 --> 00:23:21.880
+of work with the top maintainers program.
+
+
+00:23:21.880 --> 00:23:25.600
+So these are maintainers of key large open source projects that are working
+
+
+00:23:25.600 --> 00:23:28.080
+at scale and with big impact on the ecosystem.
+
+
+00:23:28.680 --> 00:23:33.400
+So we used a few things to sort of gather this first with some data.
+
+
+00:23:33.400 --> 00:23:37.800
+We called it OctoRank, which is just looking at sort of the size of the community I get
+
+
+00:23:37.800 --> 00:23:40.440
+hub, the four stars and different metrics that we have.
+
+
+00:23:40.440 --> 00:23:44.760
+But also a lot of manual curation, just looking at the ecosystem and seeing which projects
+
+
+00:23:44.760 --> 00:23:47.240
+we thought should be part of this.
+
+
+00:23:47.240 --> 00:23:51.240
+And so for this group, we do meet with them regularly to provide both like a private
+
+
+00:23:51.240 --> 00:23:55.720
+space for peer learning, but also support just one-on-one support to make sure that they're
+
+
+00:23:55.720 --> 00:24:00.280
+getting what they need out of GitHub and how can really support their communities and continue to grow.
+
+
+00:24:00.280 --> 00:24:05.560
+And they're also a nice platform for testing out new features and just getting feedback from
+
+
+00:24:05.560 --> 00:24:12.760
+these people who are running the open source that is so dependent on by our whole digital infrastructure.
+
+
+00:24:12.760 --> 00:24:20.440
+So this is quite a different, it's a different, I can't think of that word, it's a different
+
+
+00:24:20.440 --> 00:24:23.040
+back, back a profile, profile open source maintainers,
+
+
+00:24:23.040 --> 00:24:25.560
+then some of the broader maintainers that we're seeing.
+
+
+00:24:25.560 --> 00:24:27.160
+So these are people that are normally like fully
+
+
+00:24:27.160 --> 00:24:28.760
+employed to do this work.
+
+
+00:24:28.760 --> 00:24:30.600
+And they're working on giant products
+
+
+00:24:30.600 --> 00:24:32.720
+and not, not really the small items.
+
+
+00:24:32.720 --> 00:24:36.040
+So we're also for the broader open source community
+
+
+00:24:36.040 --> 00:24:36.880
+of maintainers.
+
+
+00:24:36.880 --> 00:24:38.440
+We do things like maintainer month.
+
+
+00:24:38.440 --> 00:24:41.000
+We mentioned a little bit the bulk sponsorships
+
+
+00:24:41.000 --> 00:24:43.240
+that was part of a maintainer month experiment.
+
+
+00:24:43.240 --> 00:24:45.200
+Like we wanted to see if we can give this money
+
+
+00:24:45.200 --> 00:24:47.760
+to maintainers efficiently.
+
+
+00:24:47.760 --> 00:24:50.920
+And yeah, fairly.
+
+
+00:24:50.920 --> 00:24:52.320
+So just distributing it equally,
+
+
+00:24:52.320 --> 00:24:56.360
+everyone got about $500 USD.
+
+
+00:24:56.360 --> 00:24:58.040
+So we partnered with sponsors and the Ospo
+
+
+00:24:58.040 --> 00:25:00.240
+for that open source program office here.
+
+
+00:25:00.240 --> 00:25:05.080
+But we are still building out our breath maintainers program.
+
+
+00:25:05.080 --> 00:25:08.160
+So ways that we can just help your average open source
+
+
+00:25:08.160 --> 00:25:10.320
+maintainer who maybe isn't full-time paid
+
+
+00:25:10.320 --> 00:25:13.200
+at a company to do this or who's just starting out
+
+
+00:25:13.200 --> 00:25:16.520
+or who's running a project that's really highly dependent
+
+
+00:25:16.520 --> 00:25:21.160
+by a lot of people, but maybe it's not as visible, so it's maybe lower down on the stack,
+
+
+00:25:21.160 --> 00:25:25.440
+so it's a little bit harder for people to see that and want to contribute.
+
+
+00:25:25.440 --> 00:25:29.920
+So a lot of what I'm thinking about over this next year, actually, now that we're at the end of the year,
+
+
+00:25:29.920 --> 00:25:34.360
+and I'm starting to plan, how do we better engage this broader group of breath maintainers,
+
+
+00:25:34.360 --> 00:25:42.400
+and how do we give them a place to really learn from each other, and just be successful as maintainers?
+
+
+00:25:42.400 --> 00:25:44.600
+So yeah, if you are interested, reach out.
+
+
+00:25:44.600 --> 00:25:46.600
+Let me know what you need.
+
+
+00:25:46.600 --> 00:25:47.920
+Yeah, that's great.
+
+
+00:25:47.920 --> 00:25:49.240
+No, no, no, no, it's fine.
+
+
+00:25:49.240 --> 00:25:54.080
+Yeah, no, we'll share the necessary information so people can connect with you.
+
+
+00:25:54.080 --> 00:25:58.240
+I think it's in invaluable service to people.
+
+
+00:25:58.240 --> 00:26:00.760
+And yeah, there's so many things going on at GitHub.
+
+
+00:26:00.760 --> 00:26:02.800
+It's like the JavaScript ecosystem.
+
+
+00:26:02.800 --> 00:26:05.440
+It's nearly impossible to keep up with.
+
+
+00:26:05.440 --> 00:26:08.280
+So I'm glad you're sharing all of these things.
+
+
+00:26:08.280 --> 00:26:13.840
+I'm talking about supporting various people.
+
+
+00:26:13.840 --> 00:26:17.540
+One of the other things that I told, when I mentioned the 3% I saw,
+
+
+00:26:17.540 --> 00:26:19.980
+there was another metric that I was curious about.
+
+
+00:26:19.980 --> 00:26:25.280
+And that is around contributions from people who identify as female.
+
+
+00:26:25.280 --> 00:26:32.160
+Now, there was a study done, which, okay, so first of all, according to data,
+
+
+00:26:32.160 --> 00:26:35.720
+it says that around 30% of contributions to open source comes from people
+
+
+00:26:35.720 --> 00:26:37.320
+who identify as female.
+
+
+00:26:37.320 --> 00:26:43.320
+Again, a very low number if you take in the ratio in populations.
+
+
+00:26:43.320 --> 00:26:54.320
+But moreover, there was a study done to look at this idea of masking contributors' identity
+
+
+00:26:54.320 --> 00:26:56.320
+when they open a pull request.
+
+
+00:26:56.320 --> 00:27:03.320
+And so all you see is an avatar with a non-descript user name and code.
+
+
+00:27:03.320 --> 00:27:05.680
+So that's all you have to go on.
+
+
+00:27:05.680 --> 00:27:09.640
+And what they found is, when it's like that,
+
+
+00:27:09.640 --> 00:27:14.800
+more pull requests from female contributors were accepted
+
+
+00:27:14.800 --> 00:27:16.280
+than from male.
+
+
+00:27:16.280 --> 00:27:19.720
+Whereas when you take the blinders off, it traverses.
+
+
+00:27:19.720 --> 00:27:22.360
+It goes back to this statistic.
+
+
+00:27:22.360 --> 00:27:23.800
+Which is interesting.
+
+
+00:27:23.800 --> 00:27:26.600
+So there's some theories around why,
+
+
+00:27:26.600 --> 00:27:29.320
+because one of the reasons why you would merge a pull request
+
+
+00:27:29.320 --> 00:27:30.880
+is because it's high quality, right?
+
+
+00:27:30.880 --> 00:27:34.520
+So they were asking also the question of,
+
+
+00:27:34.520 --> 00:27:39.040
+so why is female contributions such high quality,
+
+
+00:27:39.040 --> 00:27:43.480
+and why is it missed when you connect the identity to the code?
+
+
+00:27:43.480 --> 00:27:44.960
+So there's, I guess,
+
+
+00:27:44.960 --> 00:27:49.400
+cultural things going on there that's a little tough to identify and address.
+
+
+00:27:49.400 --> 00:27:52.720
+But the other thing is it's this whole concept that,
+
+
+00:27:52.720 --> 00:27:55.560
+yet again, referring to another study,
+
+
+00:27:55.560 --> 00:28:00.480
+they found that a female is only likely to apply for a job if she feels
+
+
+00:28:00.480 --> 00:28:03.720
+she can fulfill 100% of the job requirements.
+
+
+00:28:03.720 --> 00:28:05.720
+And we all know what job requirements look like.
+
+
+00:28:05.720 --> 00:28:08.040
+And for the most part, it's almost impossible
+
+
+00:28:08.040 --> 00:28:11.040
+to fulfill 100% of what is requested
+
+
+00:28:11.040 --> 00:28:12.480
+on the job application.
+
+
+00:28:12.480 --> 00:28:17.120
+Whereas men will apply if they can only satisfy
+
+
+00:28:17.120 --> 00:28:19.080
+roughly 65% of it.
+
+
+00:28:19.080 --> 00:28:22.200
+So it's this weird disconnect.
+
+
+00:28:22.200 --> 00:28:26.560
+So I wonder if GitHub has done any research,
+
+
+00:28:26.560 --> 00:28:33.440
+any experimentation, have any additional insights to you, have any ideas around this like how can we
+
+
+00:28:33.440 --> 00:28:40.560
+how can we like make this healthier. But I want to preface before I hand it back to you. I want to
+
+
+00:28:40.560 --> 00:28:46.720
+preface that with another piece of interesting information. So there's a person called your
+
+
+00:28:46.720 --> 00:28:52.800
+Rundle and Err. I believe is a Microsoft research still. You as like the father of virtual reality,
+
+
+00:28:53.520 --> 00:28:59.120
+He talks a lot about social media and he has an interesting thing theory that he shared where he says like
+
+
+00:28:59.120 --> 00:29:01.520
+The interesting thing that he's found is
+
+
+00:29:01.520 --> 00:29:05.200
+Gett hub is the most successful open
+
+
+00:29:05.200 --> 00:29:10.560
+Social network on the internet and I've never really put those two
+
+
+00:29:10.560 --> 00:29:18.320
+Together the social network aspect and the code thing, but it's there. It's always been there
+
+
+00:29:18.320 --> 00:29:22.400
+I mean, there's even a shirt that I have from Gett hub that says social coding
+
+
+00:29:22.800 --> 00:29:26.800
+So the social aspect of it has always been part of GitHub.
+
+
+00:29:26.800 --> 00:29:33.120
+And his theory is that the reason why GitHub is getting the social aspect right,
+
+
+00:29:33.120 --> 00:29:43.040
+let's just leave the 13% on the shelf right now, is because there's this sense of a shared ownership.
+
+
+00:29:43.040 --> 00:29:48.600
+And there's this creative pursuit that's happening where people are making things together,
+
+
+00:29:48.600 --> 00:29:51.320
+and they share this ownership and these things they're making.
+
+
+00:29:51.640 --> 00:29:54.400
+And all the other social networks have none of that.
+
+
+00:29:54.400 --> 00:29:57.440
+You have creators and you have consumers.
+
+
+00:29:57.440 --> 00:29:59.760
+And the one serves the other.
+
+
+00:29:59.760 --> 00:30:02.480
+You almost don't have collaborative things.
+
+
+00:30:02.480 --> 00:30:05.200
+The interesting thing is maybe that's why TikTok
+
+
+00:30:05.200 --> 00:30:07.880
+is so successful because it has a little bit more
+
+
+00:30:07.880 --> 00:30:11.440
+of a collaborative aspect where you can rough off
+
+
+00:30:11.440 --> 00:30:13.960
+another person's video and put your little thing
+
+
+00:30:13.960 --> 00:30:15.040
+spin on it.
+
+
+00:30:15.040 --> 00:30:19.560
+So that's a lot of theories and ideas and research and stuff.
+
+
+00:30:19.560 --> 00:30:24.560
+Besides, it's love to give the floor of it through the two of you and just speak to whatever
+
+
+00:30:24.560 --> 00:30:27.560
+resonated in all of that with you.
+
+
+00:30:27.560 --> 00:30:33.280
+I do think I remember that study you mentioned where the women identified profiles when they
+
+
+00:30:33.280 --> 00:30:34.880
+masked them in GitHub.
+
+
+00:30:34.880 --> 00:30:37.920
+They were at the pull request where excepted a little bit earlier.
+
+
+00:30:37.920 --> 00:30:39.720
+Was that a Mozilla research study?
+
+
+00:30:39.720 --> 00:30:45.080
+Am I remembering that correctly?
+
+
+00:30:45.080 --> 00:30:46.560
+- I still have had this idea.
+
+
+00:30:46.560 --> 00:30:49.640
+It was abandoned, but the study I read wasn't
+
+
+00:30:49.640 --> 00:30:51.960
+directly based off of the Mozilla Initiative,
+
+
+00:30:51.960 --> 00:30:55.140
+but the Mozilla one had pretty much the same results.
+
+
+00:30:55.140 --> 00:30:58.520
+- Yeah, I was just gonna ask,
+
+
+00:30:58.520 --> 00:31:01.320
+Nathan, do you have like Demetris' work with Alin?
+
+
+00:31:01.320 --> 00:31:04.400
+'Cause I remember her sharing the study that they did
+
+
+00:31:04.400 --> 00:31:07.280
+as research preparing for this Alin program,
+
+
+00:31:07.280 --> 00:31:10.040
+just to really help increase diversity and open source.
+
+
+00:31:10.040 --> 00:31:12.360
+I'm trying to look at up now so I can share
+
+
+00:31:12.360 --> 00:31:13.520
+a little bit more.
+
+
+00:31:13.520 --> 00:31:16.960
+But I think when they were looking at it,
+
+
+00:31:16.960 --> 00:31:19.760
+a good percentage of open source contributors
+
+
+00:31:19.760 --> 00:31:21.240
+said that they felt welcome.
+
+
+00:31:21.240 --> 00:31:23.640
+Like it was like really high 80s or 90s.
+
+
+00:31:23.640 --> 00:31:27.040
+But then if they looked at the underrepresented groups,
+
+
+00:31:27.040 --> 00:31:30.520
+so those that did not identify as men
+
+
+00:31:30.520 --> 00:31:33.040
+or from like different underrepresented groups.
+
+
+00:31:33.040 --> 00:31:35.840
+Within that, it was much lower.
+
+
+00:31:35.840 --> 00:31:38.880
+It was like closer to 50, 60%
+
+
+00:31:38.880 --> 00:31:40.320
+that actually felt like they were welcome
+
+
+00:31:40.320 --> 00:31:41.600
+in open source communities.
+
+
+00:31:41.600 --> 00:31:46.760
+So just understanding that disconnect was really big for her.
+
+
+00:31:46.760 --> 00:31:49.120
+And then she built out this all-in program,
+
+
+00:31:49.120 --> 00:31:51.400
+which really partnered with HBCUs,
+
+
+00:31:51.400 --> 00:31:54.600
+the Storkley Black University's and colleges in the US
+
+
+00:31:54.600 --> 00:31:57.080
+to provide internships for underrepresented groups
+
+
+00:31:57.080 --> 00:31:58.720
+and get them into open source.
+
+
+00:31:58.720 --> 00:32:00.960
+So I apologize if I'm getting those numbers wrong.
+
+
+00:32:00.960 --> 00:32:05.360
+I think that's like the rough percentages that they had.
+
+
+00:32:05.360 --> 00:32:08.520
+And maybe I'll let you chime in if you could think of anything
+
+
+00:32:08.520 --> 00:32:10.240
+else.
+
+
+00:32:10.240 --> 00:32:14.300
+- Yeah, I mean, I did wanna touch on the social coding aspect
+
+
+00:32:14.300 --> 00:32:19.300
+sculpt because I think that's really core to what GitHub is,
+
+
+00:32:19.300 --> 00:32:23.440
+which is ultimately when you think about the community
+
+
+00:32:23.440 --> 00:32:25.620
+on GitHub and how they're building together,
+
+
+00:32:25.620 --> 00:32:26.780
+it is a social endeavor.
+
+
+00:32:26.780 --> 00:32:31.420
+It's something that you really depend on this team
+
+
+00:32:31.420 --> 00:32:33.280
+of people that you may have never even met.
+
+
+00:32:33.280 --> 00:32:34.420
+You may never meet.
+
+
+00:32:34.420 --> 00:32:37.340
+You don't even know what their names are, right?
+
+
+00:32:37.340 --> 00:32:40.580
+or you know, you're just got the GitHub handle.
+
+
+00:32:40.580 --> 00:32:45.740
+And that sort of pursuit that you were talking about
+
+
+00:32:45.740 --> 00:32:48.980
+you're on speaks too as well is really beautiful.
+
+
+00:32:48.980 --> 00:32:52.780
+Like the fact that you have an entire community of folks
+
+
+00:32:52.780 --> 00:32:54.320
+that you can build with together
+
+
+00:32:54.320 --> 00:32:56.780
+that you may never know, that you will never know.
+
+
+00:32:56.780 --> 00:33:00.660
+But that you are building on the work of others.
+
+
+00:33:00.660 --> 00:33:02.260
+You're sure standing on shoulders of diets
+
+
+00:33:02.260 --> 00:33:05.460
+if you wanna use the often used global phase, right?
+
+
+00:33:05.460 --> 00:33:10.020
+And I think that's what makes me so happy that GitHub exists
+
+
+00:33:10.020 --> 00:33:11.540
+and that there's open source.
+
+
+00:33:11.540 --> 00:33:13.700
+Open source would still exist out of GitHub.
+
+
+00:33:13.700 --> 00:33:16.960
+But it certainly made it easier that a simple pull across
+
+
+00:33:16.960 --> 00:33:20.220
+could enable you to learn from and work with some
+
+
+00:33:20.220 --> 00:33:22.020
+of the best people in the industry
+
+
+00:33:22.020 --> 00:33:25.060
+or the type of technology that you're working on.
+
+
+00:33:25.060 --> 00:33:29.420
+So I really appreciate that there is this sense
+
+
+00:33:29.420 --> 00:33:31.780
+that GitHub isn't just a fully consumptive
+
+
+00:33:31.780 --> 00:33:34.580
+for the classic social networking experience,
+
+
+00:33:34.580 --> 00:33:37.260
+but rather as a productive pursuit
+
+
+00:33:37.260 --> 00:33:41.260
+where people actually want to move things forward together.
+
+
+00:33:41.260 --> 00:33:43.260
+You're not getting eyeballs
+
+
+00:33:43.260 --> 00:33:45.500
+because you've said something controversial
+
+
+00:33:45.500 --> 00:33:49.660
+or you've been kind of a jerk in some social networks, right?
+
+
+00:33:49.660 --> 00:33:54.460
+But that actually you are helping someone do something
+
+
+00:33:54.460 --> 00:33:57.700
+or you're adding to this global network of knowledge
+
+
+00:33:57.700 --> 00:33:59.500
+that exists on GitHub.
+
+
+00:33:59.500 --> 00:34:02.140
+So for that reason, it's a company
+
+
+00:34:02.140 --> 00:34:03.540
+that I'm proud to work for,
+
+
+00:34:03.540 --> 00:34:06.620
+but also a community that I'm proud to be a part of.
+
+
+00:34:06.620 --> 00:34:12.360
+And then to the point around, underrepresented voices
+
+
+00:34:12.360 --> 00:34:16.580
+and things like that, I think a lot of this is about
+
+
+00:34:16.580 --> 00:34:19.100
+being able to share examples of folks
+
+
+00:34:19.100 --> 00:34:20.500
+who have done this successfully.
+
+
+00:34:20.500 --> 00:34:22.940
+And I think open source over the last 20 years
+
+
+00:34:22.940 --> 00:34:25.540
+has really changed in its overall makeup.
+
+
+00:34:25.540 --> 00:34:28.460
+I think we have a lot to do moving forward.
+
+
+00:34:28.460 --> 00:34:33.460
+But I am sort of heartened just by the overall
+
+
+00:34:33.460 --> 00:34:40.460
+all group that have come through all in, like Abby was talking about as well as many
+
+
+00:34:40.460 --> 00:34:47.260
+of the campus advocates and the thousands of GitHub education participants.
+
+
+00:34:47.260 --> 00:34:52.620
+You know, that makeup is vastly different than the current GitHub community today.
+
+
+00:34:52.620 --> 00:34:58.100
+So I'm sort of heartened and excited about what the future entails on that side.
+
+
+00:34:58.100 --> 00:35:18.100
+Yeah. I'm always, I don't know, I'm grateful that GitHub exists for so many reasons, but yeah, I don't know where, where the, I always wonder where open source would have been now if it wasn't for companies like GitHub.
+
+
+00:35:18.100 --> 00:35:22.420
+I mean, you know, like I said, get up is like not the only one,
+
+
+00:35:22.420 --> 00:35:25.500
+they get live with theirs, other ones.
+
+
+00:35:25.500 --> 00:35:30.180
+Get up is why far the biggest place where social coding is happening.
+
+
+00:35:30.180 --> 00:35:34.660
+And I 100% agree that the social aspect is key to GitHub
+
+
+00:35:34.660 --> 00:35:37.620
+from the beginning and more so now I guess.
+
+
+00:35:37.620 --> 00:35:42.620
+And talking to the controversial thing that gets you noticed,
+
+
+00:35:42.620 --> 00:35:44.180
+it's quite the opposite of get up.
+
+
+00:35:44.180 --> 00:35:48.740
+like that gets you kicked off the platform so quickly.
+
+
+00:35:48.740 --> 00:35:50.980
+It's not tolerated.
+
+
+00:35:50.980 --> 00:35:55.300
+It's as if the community on GitHub has decided
+
+
+00:35:55.300 --> 00:35:58.180
+that we want this thing to be healthy
+
+
+00:35:58.180 --> 00:36:00.940
+and we're gonna do our damnedest to keep it that way.
+
+
+00:36:00.940 --> 00:36:03.220
+So, you know, GitHub has put things in place
+
+
+00:36:03.220 --> 00:36:04.620
+to assist with that,
+
+
+00:36:04.620 --> 00:36:07.420
+but the community itself is doing a lot with that
+
+
+00:36:07.420 --> 00:36:09.660
+'cause I've been involved in a whole bunch of open source projects
+
+
+00:36:09.660 --> 00:36:13.300
+and probably the biggest one is MDN WebDocs.
+
+
+00:36:13.300 --> 00:36:15.260
+And I mean, as the community manager,
+
+
+00:36:15.260 --> 00:36:18.700
+I interact with the community obviously on a daily basis.
+
+
+00:36:18.700 --> 00:36:23.060
+And since I've been the community manager officially
+
+
+00:36:23.060 --> 00:36:26.460
+in April this year, I can count on one hand
+
+
+00:36:26.460 --> 00:36:31.460
+how many times we've had to click somebody off.
+
+
+00:36:31.460 --> 00:36:35.420
+And that's unheard of on a social platform
+
+
+00:36:35.420 --> 00:36:38.860
+where you four or five people maybe
+
+
+00:36:38.860 --> 00:36:43.860
+in a span of six, seven months that has stepped over the line.
+
+
+00:36:43.860 --> 00:36:48.580
+And it's been not really that disruptive,
+
+
+00:36:48.580 --> 00:36:52.580
+because we were able to pick it up so quickly
+
+
+00:36:52.580 --> 00:36:55.820
+or with this way that you can report internally
+
+
+00:36:55.820 --> 00:36:58.300
+inside your GitHub repose,
+
+
+00:36:58.300 --> 00:37:01.020
+a community member would flag it for us
+
+
+00:37:01.020 --> 00:37:02.420
+and we'd wake up and get up,
+
+
+00:37:02.420 --> 00:37:04.460
+shows you a little nice notification board
+
+
+00:37:04.460 --> 00:37:07.260
+that's up saying there's one unresolved report
+
+
+00:37:07.260 --> 00:37:08.700
+that you need to address.
+
+
+00:37:08.700 --> 00:37:12.380
+You go right in there, you can see the context, what happened, and you can say, "Yep, this
+
+
+00:37:12.380 --> 00:37:13.940
+is not acceptable."
+
+
+00:37:13.940 --> 00:37:17.260
+You do the thing, you report them to get up and you ban them and block them from your
+
+
+00:37:17.260 --> 00:37:18.580
+project.
+
+
+00:37:18.580 --> 00:37:22.660
+Everything turns into the little ghost avatar and all their stuff's gone and you can
+
+
+00:37:22.660 --> 00:37:24.580
+move on with Thursday to the day.
+
+
+00:37:24.580 --> 00:37:29.980
+So yeah, it's really amazing.
+
+
+00:37:29.980 --> 00:37:38.340
+The only thing is I constantly go back to like, "How do we encourage a more diverse audience
+
+
+00:37:38.340 --> 00:37:43.780
+to join in because, and I wonder sometimes if the audience isn't more diverse than they
+
+
+00:37:43.780 --> 00:37:50.660
+may think because I've also heard that there's a lot of people from underrepresented audiences
+
+
+00:37:50.660 --> 00:37:59.620
+that purposefully change who they represent as on a platform such as, "Do not be judged,
+
+
+00:37:59.620 --> 00:38:01.780
+do not be excluded."
+
+
+00:38:01.780 --> 00:38:09.380
+So I wonder if you really dig into the details, which I don't think that would be very ethical,
+
+
+00:38:09.380 --> 00:38:14.380
+but if you put that on the side, I think there's probably a larger percentage of underrepresented
+
+
+00:38:14.380 --> 00:38:18.020
+people contributing, but they're not being themselves and that sucks.
+
+
+00:38:18.020 --> 00:38:20.820
+You should never feel ashamed of who you are.
+
+
+00:38:20.820 --> 00:38:23.900
+You should never hide who you are just to contribute to something.
+
+
+00:38:23.900 --> 00:38:29.980
+You should be celebrated for contributing for who you are, not who you represent yourself
+
+
+00:38:29.980 --> 00:38:37.180
+to be just to not be pushed out. Yeah, I can keep talking about this thing for a long time because
+
+
+00:38:37.180 --> 00:38:43.180
+it's a me and I. No, but you like to. Oh, no, no, what I was going to say is, you know, you touched
+
+
+00:38:43.180 --> 00:38:47.980
+on a really important part of this, which is, GitHub has this unique ability to allow communities
+
+
+00:38:47.980 --> 00:38:53.820
+to police themselves. Not, I say police, not in like a scary way, but more of like, hey, you know,
+
+
+00:38:53.820 --> 00:38:58.540
+this is how normal human interaction actually works, right? Which is if you're in a front group,
+
+
+00:38:58.540 --> 00:38:59.780
+but someone's a jerk.
+
+
+00:38:59.780 --> 00:39:01.860
+You're like, we're not talking to this person anymore.
+
+
+00:39:01.860 --> 00:39:04.700
+And something that the internet disrupted
+
+
+00:39:04.700 --> 00:39:08.500
+was this normal mode of being a human.
+
+
+00:39:08.500 --> 00:39:10.260
+What our interactions were going to be.
+
+
+00:39:10.260 --> 00:39:14.100
+And a lot of what I think about with open sources
+
+
+00:39:14.100 --> 00:39:16.100
+commits and code are really important.
+
+
+00:39:16.100 --> 00:39:18.740
+But a lot of it is this unseen work of people
+
+
+00:39:18.740 --> 00:39:20.900
+who are managing the issues, managing community,
+
+
+00:39:20.900 --> 00:39:24.540
+talking through discussions, helping people get onboarded,
+
+
+00:39:24.540 --> 00:39:27.620
+showing up what good first issues can look like.
+
+
+00:39:27.620 --> 00:39:31.860
+And I think there's a lot that we don't talk about
+
+
+00:39:31.860 --> 00:39:34.620
+what happens on GitHub in building really healthy
+
+
+00:39:34.620 --> 00:39:36.620
+community interactions.
+
+
+00:39:36.620 --> 00:39:39.460
+And in other social networks, this just doesn't happen
+
+
+00:39:39.460 --> 00:39:41.500
+because there's no productive work to be done.
+
+
+00:39:41.500 --> 00:39:43.540
+It is merely a consumptive activity.
+
+
+00:39:43.540 --> 00:39:49.380
+And so I'll always say, I really appreciate
+
+
+00:39:49.380 --> 00:39:51.820
+and love that you're sort of shining a light
+
+
+00:39:51.820 --> 00:39:53.500
+on a lot of the non-coding--
+
+
+00:39:53.500 --> 00:39:55.180
+there's a lot of non-coding aspects
+
+
+00:39:55.180 --> 00:39:57.460
+that occur on GitHub, like community management,
+
+
+00:39:57.460 --> 00:40:02.060
+that really make a huge difference in how that project is
+
+
+00:40:02.060 --> 00:40:03.620
+successful and how we function.
+
+
+00:40:03.620 --> 00:40:07.140
+So I think I'm glad that GitHub is giving you the tools.
+
+
+00:40:07.140 --> 00:40:10.260
+I'm hoping that we're continuing to give you more tools.
+
+
+00:40:10.260 --> 00:40:13.940
+Last conference, we just talked about,
+
+
+00:40:13.940 --> 00:40:16.820
+you can now turn off all of your profile settings.
+
+
+00:40:16.820 --> 00:40:20.620
+So people don't know who you are from the profile setting view.
+
+
+00:40:20.620 --> 00:40:23.180
+But you can still contribute to open source in the public.
+
+
+00:40:23.180 --> 00:40:24.860
+And I thought that was a really important way
+
+
+00:40:24.860 --> 00:40:27.300
+where I agree with you.
+
+
+00:40:27.300 --> 00:40:29.500
+It sucks you shouldn't be hiding who you are,
+
+
+00:40:29.500 --> 00:40:31.260
+but if you don't want to share who you are,
+
+
+00:40:31.260 --> 00:40:33.620
+sometimes people have preferences.
+
+
+00:40:33.620 --> 00:40:36.180
+I never wanted to be in the phone book back in the 90s.
+
+
+00:40:36.180 --> 00:40:38.380
+People will remember that stuff.
+
+
+00:40:38.380 --> 00:40:41.580
+But you should be able to do that
+
+
+00:40:41.580 --> 00:40:42.260
+and then still,
+
+
+00:40:42.260 --> 00:40:47.180
+productively be an active participant in open source communities.
+
+
+00:40:47.180 --> 00:40:48.820
+And I think giving people the choice
+
+
+00:40:48.820 --> 00:40:50.700
+and then the tools to do that
+
+
+00:40:50.700 --> 00:40:53.140
+is a really important aspect of encouraging people
+
+
+00:40:53.140 --> 00:40:55.280
+from all backgrounds to be able to contribute.
+
+
+00:40:55.280 --> 00:40:58.500
+- Yeah, I just wanna jump in and say,
+
+
+00:40:58.500 --> 00:41:00.220
+I do appreciate how GitHub has added
+
+
+00:41:00.220 --> 00:41:03.300
+so much the product over time to really help encourage that.
+
+
+00:41:03.300 --> 00:41:05.620
+So especially like the code of conduct picker
+
+
+00:41:05.620 --> 00:41:07.420
+and just like surfacing the code of conduct
+
+
+00:41:07.420 --> 00:41:09.100
+on the main repo page,
+
+
+00:41:09.100 --> 00:41:11.460
+so it's not just hidden as another file there.
+
+
+00:41:11.460 --> 00:41:12.860
+I think that made a huge difference
+
+
+00:41:12.860 --> 00:41:14.260
+in adoption of code of conducts
+
+
+00:41:14.260 --> 00:41:16.540
+across the open source ecosystem.
+
+
+00:41:16.540 --> 00:41:18.740
+And then even more recently,
+
+
+00:41:18.740 --> 00:41:19.980
+one thing I've been hearing a lot
+
+
+00:41:19.980 --> 00:41:21.980
+from the large open source projects
+
+
+00:41:21.980 --> 00:41:27.020
+they want to add a little reason on why they banned someone because they found the people kept coming back
+
+
+00:41:27.020 --> 00:41:35.180
+with different parts of the org or different projects. And I appreciate it. It's on the road map now.
+
+
+00:41:35.180 --> 00:41:41.180
+Like people are listening to this and adding small tweaks that can make a big difference in how a
+
+
+00:41:41.180 --> 00:41:48.380
+community is interacting. Yeah, and again, there's just an exemplary example again where you get
+
+
+00:41:48.380 --> 00:41:51.940
+listening and actually doing something which is rare.
+
+
+00:41:51.940 --> 00:41:59.460
+Oftentimes companies say, "We care, we want to hear what you need and you speak up and
+
+
+00:41:59.460 --> 00:42:01.340
+nothing happens."
+
+
+00:42:01.340 --> 00:42:03.940
+So yeah, it's great.
+
+
+00:42:03.940 --> 00:42:04.940
+It's great.
+
+
+00:42:04.940 --> 00:42:09.900
+I do want to make sure, like, GitHub is responding to its developers not so far.
+
+
+00:42:09.900 --> 00:42:11.500
+Like, I don't want us to take all the credit.
+
+
+00:42:11.500 --> 00:42:14.980
+This is definitely, you know, the community is pushing us this way.
+
+
+00:42:14.980 --> 00:42:20.900
+And it's the community that should really be the one that's highlighted.
+
+
+00:42:20.900 --> 00:42:21.740
+But yes, yes.
+
+
+00:42:21.740 --> 00:42:23.500
+I'm glad we implemented it.
+
+
+00:42:23.500 --> 00:42:26.140
+But certainly not all the ideas were coming for us.
+
+
+00:42:26.140 --> 00:42:27.500
+Not for sure.
+
+
+00:42:27.500 --> 00:42:31.180
+Not for sure, but the fact that GitHub actually listens, truly listens.
+
+
+00:42:31.180 --> 00:42:38.260
+There's a difference between listening and just being a, I don't know,
+
+
+00:42:38.260 --> 00:42:40.060
+avoid into which people scream.
+
+
+00:42:40.060 --> 00:42:45.940
+know, it's, I know a lot of these ideas and things come from the community, but the fact
+
+
+00:42:45.940 --> 00:42:51.500
+that GitHub takes it too hard and say, you know what, this is a good idea. Let's do this.
+
+
+00:42:51.500 --> 00:42:57.500
+That is not something that happens a lot. You can look at it with a lot of big corporate
+
+
+00:42:57.500 --> 00:43:04.660
+companies and you'll find that you ask for a feature or you report a bug and two years
+
+
+00:43:04.660 --> 00:43:09.940
+later it's still there. And you're like, "Mm, okay, I guess they don't truly care about the people who
+
+
+00:43:09.940 --> 00:43:15.140
+use their software or hardware or whatever the case may be." So three big initiatives were announced
+
+
+00:43:15.140 --> 00:43:20.340
+at a universe. The first one was like I mentioned earlier where GitHub is investing in its own stack
+
+
+00:43:20.340 --> 00:43:28.260
+and then there was two other. The one is focused on enabling people to potentially quit their
+
+
+00:43:28.260 --> 00:43:33.820
+they day job and make open source their career, either as a means to an end or as a means
+
+
+00:43:33.820 --> 00:43:37.780
+to something bigger, whatever that might be.
+
+
+00:43:37.780 --> 00:43:43.900
+And then the other one which was in partnership with M12, which focuses all, again, on investing
+
+
+00:43:43.900 --> 00:43:48.980
+in open source, but there the focus is very much on developer tools.
+
+
+00:43:48.980 --> 00:43:52.180
+So I had two kind of questions related to that.
+
+
+00:43:52.180 --> 00:43:56.380
+The first one is just more information about the first.
+
+
+00:43:56.380 --> 00:44:02.380
+And then the second one is when you are looking at the developer tools, is there a specific
+
+
+00:44:02.380 --> 00:44:09.940
+focus there or is it just like general any kind of tooling that improves developer productivity
+
+
+00:44:09.940 --> 00:44:11.820
+or whatever the case may be?
+
+
+00:44:11.820 --> 00:44:15.260
+Yeah, so I'll take the first one first of, I'll go to the second one.
+
+
+00:44:15.260 --> 00:44:19.220
+So for the first one with the GitHub accelerator, I'm just going to take a step back.
+
+
+00:44:19.220 --> 00:44:23.580
+So we talked a lot about OS grants and how that was an experiment in India and we wanted
+
+
+00:44:23.580 --> 00:44:28.420
+to take that experiment in India and really expand it globally and make it a much more
+
+
+00:44:28.420 --> 00:44:30.540
+tailored program for folks.
+
+
+00:44:30.540 --> 00:44:34.340
+And I think, you know, I want to start with just like sort of the problem statement because
+
+
+00:44:34.340 --> 00:44:36.740
+this is what I heard when I talked to a lot of maintainers.
+
+
+00:44:36.740 --> 00:44:38.580
+It's like, you've got a great project.
+
+
+00:44:38.580 --> 00:44:40.140
+Thousands of people are using it.
+
+
+00:44:40.140 --> 00:44:44.580
+Maybe even millions for all, you know, but you know, if you squint and just hard enough,
+
+
+00:44:44.580 --> 00:44:46.540
+it could be your full-time career.
+
+
+00:44:46.540 --> 00:44:48.380
+It could be your full-time company.
+
+
+00:44:48.380 --> 00:44:52.620
+But right now when you look at open source, like it's sort of ironic because open source
+
+
+00:44:52.620 --> 00:44:55.020
+was the original creator community on the internet.
+
+
+00:44:55.020 --> 00:44:56.620
+I mean, it literally built the internet
+
+
+00:44:56.620 --> 00:44:59.420
+as they were working together.
+
+
+00:44:59.420 --> 00:45:04.420
+And in some ways, there's this V path for you as a developer.
+
+
+00:45:04.420 --> 00:45:09.220
+Either you're going to go and do 100% employment at a company.
+
+
+00:45:09.220 --> 00:45:11.620
+And sometimes, for a lucky few, they actually
+
+
+00:45:11.620 --> 00:45:15.140
+get to work on their open-source project while at that company.
+
+
+00:45:15.140 --> 00:45:18.340
+I could think of the VS Code team at Microsoft or Flutter
+
+
+00:45:18.340 --> 00:45:19.340
+at Google.
+
+
+00:45:19.340 --> 00:45:21.300
+A lot of different teams actually exist
+
+
+00:45:21.300 --> 00:45:27.140
+within big tech companies. And you know, you're seeing more and more examples of this, like the next
+
+
+00:45:27.140 --> 00:45:36.260
+day's community or, you know, drawing five feet, I can name, I can write a lot of a ton of them.
+
+
+00:45:36.260 --> 00:45:42.260
+But at the end of the day, that's still full time employment at a company. And then the other
+
+
+00:45:42.260 --> 00:45:47.140
+side of the V curve, you could become a founder. You could actually start a company, but oftentimes
+
+
+00:45:47.140 --> 00:45:53.700
+that means raising money from VCs, signing up to a really exponential growth curve, and then,
+
+
+00:45:53.700 --> 00:45:57.380
+you know, oftentimes five years out, you might be looking back on your career and say, "Hey,
+
+
+00:45:57.380 --> 00:46:02.660
+I became the CEO of this amazing company, but I'm not a developer anymore. I'm a CEO, I'm a management,
+
+
+00:46:02.660 --> 00:46:06.340
+I'm not just diving on my own, and maybe I don't want to build a team, or maybe I don't want to
+
+
+00:46:06.340 --> 00:46:10.980
+sign up for this dramatic growth curve that then makes a bunch of promises to people and things
+
+
+00:46:10.980 --> 00:46:16.900
+like that. And so we saw this v curve and then there's this huge missing middle. It's like,
+
+
+00:46:16.900 --> 00:46:22.740
+wow, what about all the businesses that independent developers or independent companies could be?
+
+
+00:46:22.740 --> 00:46:29.620
+You know, in some ways I'm sort of looking for like that missing fortune 5 million of software
+
+
+00:46:29.620 --> 00:46:34.100
+companies. You know, you don't have to be a VC back company. You don't have to do all these things.
+
+
+00:46:34.100 --> 00:46:38.660
+But in reality, you could build a really nice lifestyle business. And like, this isn't a fantasy,
+
+
+00:46:38.660 --> 00:46:42.740
+you know, this actually happens on the internet a lot. Like if you're an amazing carpenter,
+
+
+00:46:42.740 --> 00:46:47.300
+you can have an Etsy storefront and you actually build a really healthy business that sustains
+
+
+00:46:47.300 --> 00:46:52.260
+you and your family and there are no further requirements of you or if you're an e-commerce,
+
+
+00:46:52.260 --> 00:47:00.340
+knit beautiful sweaters or you have an awesome bar that you want to build, whatever it is, right?
+
+
+00:47:00.340 --> 00:47:06.980
+You can get a Shopify storefront and you can actually like build a business on that and you have
+
+
+00:47:06.980 --> 00:47:11.780
+someone who handles all the infrastructure and eats for you and then you get to just focus on that one
+
+
+00:47:11.780 --> 00:47:17.780
+thing that you want to do. But software doesn't have that. You kind of have this like vKRT. You have to
+
+
+00:47:17.780 --> 00:47:23.220
+choose like okay you can go work for a company or you're going to go start a company and then yes
+
+
+00:47:23.220 --> 00:47:27.140
+I think on the margins you've seen some people who do consulting contracts and things like that but
+
+
+00:47:27.140 --> 00:47:33.860
+that often atomizes development and makes you think of just like an hourly worker versus like a
+
+
+00:47:33.860 --> 00:47:38.860
+a true project where this is like the full on business.
+
+
+00:47:38.860 --> 00:47:40.260
+And so we're looking at this and they're like,
+
+
+00:47:40.260 --> 00:47:42.380
+well, so how do we create more of this missing middle?
+
+
+00:47:42.380 --> 00:47:44.420
+And you know, one of the advisors in the accelerator
+
+
+00:47:44.420 --> 00:47:47.260
+actually is this person named Mike Param
+
+
+00:47:47.260 --> 00:47:50.700
+and he started sidekick and really did an amazing job.
+
+
+00:47:50.700 --> 00:47:52.500
+You know, you go to sidekick, go to the website,
+
+
+00:47:52.500 --> 00:47:54.100
+it's like, this is a full flush business.
+
+
+00:47:54.100 --> 00:47:56.260
+You think it's like 400 people behind it?
+
+
+00:47:56.260 --> 00:48:00.500
+No, it's like one person and he has a very active,
+
+
+00:48:00.500 --> 00:48:03.660
+healthy community that helps him build sidekick
+
+
+00:48:03.660 --> 00:48:08.660
+but they're not trying to be something that they don't want to be.
+
+
+00:48:08.660 --> 00:48:14.100
+So one of the things that we're really excited about is having more examples of that.
+
+
+00:48:14.100 --> 00:48:16.740
+With the accelerator, what we're doing is we're saying,
+
+
+00:48:16.740 --> 00:48:18.620
+we're going to take 10 weeks, we're going to give you the money.
+
+
+00:48:18.620 --> 00:48:21.140
+Like I said earlier, we're going to give you mentorship.
+
+
+00:48:21.140 --> 00:48:24.700
+But we want to see so many different examples of people.
+
+
+00:48:24.700 --> 00:48:29.100
+Maybe it is that you want to go and work for a company on your open-source project or not.
+
+
+00:48:29.100 --> 00:48:32.980
+Maybe this is your discovery way to really show off a new skill set
+
+
+00:48:32.980 --> 00:48:36.420
+that you have, you know, a unique perspective
+
+
+00:48:36.420 --> 00:48:38.420
+and someone wants to hire you for that.
+
+
+00:48:38.420 --> 00:48:40.940
+Maybe it's that you wanna be an independent developer
+
+
+00:48:40.940 --> 00:48:44.780
+where you have 50 sponsors who are helping you
+
+
+00:48:44.780 --> 00:48:47.700
+support this really critical software project
+
+
+00:48:47.700 --> 00:48:50.260
+that sits in a lot of people's software supply chains.
+
+
+00:48:50.260 --> 00:48:51.500
+Maybe you wanna start a company
+
+
+00:48:51.500 --> 00:48:54.780
+but not sign up for this VC backed growth curve
+
+
+00:48:54.780 --> 00:48:58.460
+but actually build a, what I would say
+
+
+00:48:58.460 --> 00:49:01.220
+like a lifestyle business for you and your family.
+
+
+00:49:01.220 --> 00:49:07.300
+Or maybe you want to go and start a big company and take VC money and go the full gamut.
+
+
+00:49:07.300 --> 00:49:09.860
+But we want to give all of those options available people.
+
+
+00:49:09.860 --> 00:49:15.460
+And I think the big thing here is how do you create more examples and ways for people to
+
+
+00:49:15.460 --> 00:49:18.100
+just say, hey, that's the career I want to take.
+
+
+00:49:18.100 --> 00:49:23.020
+Not this or that, but I want to work on this open source project and it can be the thing
+
+
+00:49:23.020 --> 00:49:25.780
+that sustains me for the long term.
+
+
+00:49:25.780 --> 00:49:29.740
+So that's really the big objective behind the accelerator.
+
+
+00:49:29.740 --> 00:49:35.420
+And then I can go over to the fund, which is slightly different, but probably along the path.
+
+
+00:49:35.420 --> 00:49:38.380
+Yeah, please do.
+
+
+00:49:38.380 --> 00:49:42.640
+So on the fun side, as we think about that trajectory, you're building a career, you're
+
+
+00:49:42.640 --> 00:49:43.640
+building a company.
+
+
+00:49:43.640 --> 00:49:50.180
+Maybe you do actually want to start that big company of DC money, etc.
+
+
+00:49:50.180 --> 00:49:53.660
+One thing that we really recognize on GitHub is that there are so many companies that are
+
+
+00:49:53.660 --> 00:49:54.980
+built on GitHub every day.
+
+
+00:49:54.980 --> 00:49:58.540
+We don't have really a hand in that at all,
+
+
+00:49:58.540 --> 00:50:01.820
+other than being the platform that supports them.
+
+
+00:50:01.820 --> 00:50:07.780
+Often, the best tools for developers are built in open source,
+
+
+00:50:07.780 --> 00:50:10.060
+because everyone understands how they're being built.
+
+
+00:50:10.060 --> 00:50:15.860
+They can contribute back if they see a feature or a thing that needs to be built on the margin.
+
+
+00:50:15.860 --> 00:50:21.220
+What we started to realize is that it's silly that GitHub doesn't help
+
+
+00:50:21.220 --> 00:50:22.900
+any of these businesses come to fruition.
+
+
+00:50:22.900 --> 00:50:24.820
+It doesn't help any of these developer tools
+
+
+00:50:24.820 --> 00:50:29.820
+kind of cross that chasm into a full-fledged developer
+
+
+00:50:29.820 --> 00:50:31.260
+product.
+
+
+00:50:31.260 --> 00:50:34.220
+And so what we wanted to do was create a way for us
+
+
+00:50:34.220 --> 00:50:36.300
+to invest in the community.
+
+
+00:50:36.300 --> 00:50:37.660
+And this is an investment fund.
+
+
+00:50:37.660 --> 00:50:40.820
+It's actually backed by-- like you were saying,
+
+
+00:50:40.820 --> 00:50:44.140
+it's called M12, which is Microsoft's Venture Arm.
+
+
+00:50:44.140 --> 00:50:46.020
+We have two great partners in Todd Graham and Franca
+
+
+00:50:46.020 --> 00:50:49.340
+Mietra, who are both part of the investment team.
+
+
+00:50:49.340 --> 00:50:51.860
+And we're looking to really support people
+
+
+00:50:51.860 --> 00:50:55.800
+in that really crucial period where you're going from like a,
+
+
+00:50:55.800 --> 00:51:00.200
+a pre-seed to seed, maybe possibly seed to series A,
+
+
+00:51:00.200 --> 00:51:06.420
+part of the journey where GitHub's insight and how open source products are actually built,
+
+
+00:51:06.420 --> 00:51:08.340
+and how you interact with the community,
+
+
+00:51:08.340 --> 00:51:10.700
+how you end up moving into an enterprise product,
+
+
+00:51:10.700 --> 00:51:19.740
+how you, you know, build a relationship with both the community side as well as the customer side.
+
+
+00:51:20.300 --> 00:51:24.300
+I think that's something that GitHub is really uniquely positioned for,
+
+
+00:51:24.300 --> 00:51:31.620
+and something that we really want to help more maintainers become CEOs of really great developer tools companies.
+
+
+00:51:31.620 --> 00:51:35.260
+When we say developer tools, they really run the gamut.
+
+
+00:51:35.260 --> 00:51:38.700
+The example, our first investment is CodeCE,
+
+
+00:51:38.700 --> 00:51:42.460
+which we were super excited about partnering with Shenan team.
+
+
+00:51:42.460 --> 00:51:47.660
+And they really sit at the heart of the code review process,
+
+
+00:51:47.660 --> 00:51:51.700
+as well as discovering newer repositories as you get started.
+
+
+00:51:51.700 --> 00:51:55.060
+And so for us, it was a really complimentary investment.
+
+
+00:51:55.060 --> 00:51:57.540
+It made sense because it is so stitched
+
+
+00:51:57.540 --> 00:51:59.580
+into how GitHub should be working
+
+
+00:51:59.580 --> 00:52:01.740
+as well as what developers need
+
+
+00:52:01.740 --> 00:52:03.540
+when they're trying to understand the code based.
+
+
+00:52:03.540 --> 00:52:05.620
+You know, they're rocking up to the thing first time.
+
+
+00:52:05.620 --> 00:52:08.060
+They're like, well, what happens if I do this or that?
+
+
+00:52:08.060 --> 00:52:09.820
+How does this all flow through?
+
+
+00:52:09.820 --> 00:52:11.180
+So I think they're a great example.
+
+
+00:52:11.180 --> 00:52:15.340
+But as we look out across,
+
+
+00:52:15.340 --> 00:52:21.180
+We committed a $10 million sum to the fund and we'll be looking to do a set of investments
+
+
+00:52:21.180 --> 00:52:25.900
+over the next year. One of the key components is going to be, you know, is this a tool that
+
+
+00:52:25.900 --> 00:52:30.780
+really helps developers in their DevOps life cycle? And the second is really, you know,
+
+
+00:52:30.780 --> 00:52:36.220
+are they building it with a community in mind, whether that's, you know, an open,
+
+
+00:52:36.220 --> 00:52:42.620
+you know, open core model or with an open source community that is really helping advance and
+
+
+00:52:42.620 --> 00:52:44.860
+and augment the product itself.
+
+
+00:52:44.860 --> 00:52:47.820
+So that's sort of the objective behind the fund.
+
+
+00:52:47.820 --> 00:52:49.460
+I think we've got a lot of work to do
+
+
+00:52:49.460 --> 00:52:54.460
+and a lot of ways to show how this partnership actually works
+
+
+00:52:54.460 --> 00:52:57.500
+that I think we've got in a great start
+
+
+00:52:57.500 --> 00:53:01.580
+and we're excited to partner with more CEOs in this space.
+
+
+00:53:01.580 --> 00:53:03.140
+- Yeah, that's great.
+
+
+00:53:03.140 --> 00:53:04.580
+Yeah, I think that's perfect.
+
+
+00:53:04.580 --> 00:53:06.540
+That is two pair perfectly together.
+
+
+00:53:06.540 --> 00:53:11.540
+I'm curious just on the first Wendy accelerator,
+
+
+00:53:11.540 --> 00:53:16.540
+Who can apply for to horror or to the accelerator?
+
+
+00:53:16.540 --> 00:53:20.940
+- Yeah, so the first class is gonna be super experimental.
+
+
+00:53:20.940 --> 00:53:21.940
+So what I wanna say is like,
+
+
+00:53:21.940 --> 00:53:24.620
+if you're thinking about any of this,
+
+
+00:53:24.620 --> 00:53:26.380
+if you're really excited about it at all,
+
+
+00:53:26.380 --> 00:53:30.460
+like please apply, we'll figure it out together.
+
+
+00:53:30.460 --> 00:53:33.820
+But I think if I had to pick the right lens,
+
+
+00:53:33.820 --> 00:53:35.500
+it's someone who's already got
+
+
+00:53:35.500 --> 00:53:37.620
+an existing open source project.
+
+
+00:53:37.620 --> 00:53:40.620
+You have a good healthy set of users
+
+
+00:53:40.620 --> 00:53:43.660
+who are already depending on your software.
+
+
+00:53:43.660 --> 00:53:45.980
+You have a view on how you wanna take this full time.
+
+
+00:53:45.980 --> 00:53:49.340
+You understand what this could look like,
+
+
+00:53:49.340 --> 00:53:51.940
+but you probably don't have all the answers on,
+
+
+00:53:51.940 --> 00:53:54.220
+this is a company, this is a vet, this is a vet.
+
+
+00:53:54.220 --> 00:53:57.860
+You just really wanna be able to create your job
+
+
+00:53:57.860 --> 00:53:58.940
+at work for the internet
+
+
+00:53:58.940 --> 00:54:01.060
+and work on your open-source project full time.
+
+
+00:54:01.060 --> 00:54:05.500
+And then, I think one thing that is really important to us
+
+
+00:54:05.500 --> 00:54:08.260
+is we wanna source developers from across the world.
+
+
+00:54:08.260 --> 00:54:10.340
+We're not just looking for one geography.
+
+
+00:54:10.340 --> 00:54:15.300
+It's a fully remote program so that it's able to be
+
+
+00:54:15.300 --> 00:54:19.140
+participate in it from anywhere.
+
+
+00:54:19.140 --> 00:54:24.740
+And so for us, it's really about either individuals
+
+
+00:54:24.740 --> 00:54:27.460
+or teams of two or three max
+
+
+00:54:27.460 --> 00:54:30.420
+who want to be able to take something
+
+
+00:54:30.420 --> 00:54:32.340
+that's quite a successful open search project
+
+
+00:54:32.340 --> 00:54:36.020
+out in the world today into either a new company
+
+
+00:54:36.020 --> 00:54:39.940
+or a new career for all the participants.
+
+
+00:54:39.940 --> 00:54:42.100
+So that's the main objective that we're thinking about.
+
+
+00:54:42.100 --> 00:54:45.020
+And then like I said, if you're still thinking about it,
+
+
+00:54:45.020 --> 00:54:46.460
+if you're like, oh, I don't quite fit,
+
+
+00:54:46.460 --> 00:54:47.740
+please just still apply.
+
+
+00:54:47.740 --> 00:54:49.380
+We'll talk to you and have a conversation
+
+
+00:54:49.380 --> 00:54:51.180
+and see what we can do.
+
+
+00:54:51.180 --> 00:54:52.180
+- Great.
+
+
+00:54:52.180 --> 00:54:57.180
+Abby, so stepping over to maintaining
+
+
+00:54:57.180 --> 00:54:59.900
+and running this actual open source thing
+
+
+00:54:59.900 --> 00:55:03.860
+and the tools to get up provide post universe,
+
+
+00:55:03.860 --> 00:55:06.940
+I completed a survey that was sent to me.
+
+
+00:55:06.940 --> 00:55:13.720
+And as I've mentioned before, it clearly felt like it was heavily focused around
+
+
+00:55:13.720 --> 00:55:15.840
+almost community management, like what I'm doing.
+
+
+00:55:15.840 --> 00:55:20.320
+I felt like a lot of the questions were pertinent to me and what I would need from GitHub.
+
+
+00:55:20.320 --> 00:55:27.800
+And so I'm curious if you're aware of any initiatives inside GitHub that's brewing
+
+
+00:55:27.800 --> 00:55:35.280
+and alpha stages or something that is around this way of enabling community managers
+
+
+00:55:35.280 --> 00:55:40.120
+or that kind of task-oriented thing
+
+
+00:55:40.120 --> 00:55:43.320
+to give people more tools to be able to do this better.
+
+
+00:55:43.320 --> 00:55:44.840
+Like I've mentioned, there's some challenges
+
+
+00:55:44.840 --> 00:55:49.840
+like keeping your eyes on a big org like WebDocs
+
+
+00:55:49.840 --> 00:55:53.080
+that has like 50 repositories, for example.
+
+
+00:55:53.080 --> 00:55:56.000
+And then discussions happening and stuff like that.
+
+
+00:55:56.000 --> 00:56:00.640
+Do you aware of anything that's coming out of GitHub?
+
+
+00:56:00.640 --> 00:56:03.920
+- Yeah, well, first huge thanks for filling out that survey.
+
+
+00:56:03.920 --> 00:56:07.280
+we appreciate your data and your input there.
+
+
+00:56:07.280 --> 00:56:09.920
+And I do want to tell you a little bit about the survey itself.
+
+
+00:56:09.920 --> 00:56:12.560
+So that was actually run by Grace Forerunner.
+
+
+00:56:12.560 --> 00:56:14.440
+She's the research partner for the communities,
+
+
+00:56:14.440 --> 00:56:17.600
+or-- and that survey really was to learn how we can help
+
+
+00:56:17.600 --> 00:56:19.200
+maintain or to build community.
+
+
+00:56:19.200 --> 00:56:21.560
+So exactly what you're looking at.
+
+
+00:56:21.560 --> 00:56:23.840
+And we want to hear exactly from people like you
+
+
+00:56:23.840 --> 00:56:25.400
+so we can build--
+
+
+00:56:25.400 --> 00:56:28.720
+oh, we can build products that--
+
+
+00:56:28.720 --> 00:56:29.640
+that's OK.
+
+
+00:56:29.640 --> 00:56:31.720
+Bless you, Nate.
+
+
+00:56:31.720 --> 00:56:32.720
+Thank you.
+
+
+00:56:32.720 --> 00:56:37.440
+We do want to be able to build products that really helped maintainers do this.
+
+
+00:56:37.440 --> 00:56:41.680
+And a big reason why I came to GitHub actually was because they put this
+
+
+00:56:41.680 --> 00:56:44.800
+community's work together. So it's run by Stormy Peter. So you may have
+
+
+00:56:44.800 --> 00:56:49.360
+overlapped with that Mozilla at Skolk. So she was working at MDN back in the day.
+
+
+00:56:49.360 --> 00:56:52.960
+But when I saw that she had come, yeah, when I saw that she had moved over from
+
+
+00:56:52.960 --> 00:56:56.560
+Microsoft over to GitHub, I got really excited. And it was nice to see that
+
+
+00:56:56.560 --> 00:56:59.360
+they were putting this whole part of the work together that was that's
+
+
+00:56:59.360 --> 00:57:03.360
+meant to really serve the open source community and really support the open source community.
+
+
+00:57:03.360 --> 00:57:07.600
+So part of that is an engineering team that builds products like discussions, like you mentioned,
+
+
+00:57:07.600 --> 00:57:14.640
+achievements, the feed and the profile. But it also includes parts like education, dev route,
+
+
+00:57:14.640 --> 00:57:19.520
+open source, and some docs because the documentation is a big part of this too.
+
+
+00:57:19.520 --> 00:57:26.960
+So yes, there is lots of things on the radar for open source maintainers for building community.
+
+
+00:57:27.600 --> 00:57:33.200
+I can't talk about very many of them, but we did lunch a bunch of stuff over at GitHub Universe.
+
+
+00:57:33.200 --> 00:57:37.600
+And like the biggest ones lately is like GitHub sponsors, the book sponsorships,
+
+
+00:57:37.600 --> 00:57:41.760
+I think that will be great for maintainers. But I did want to say that there is a whole part of the
+
+
+00:57:41.760 --> 00:57:47.040
+org and like hundreds of people thinking about this and working on this. So if you have input
+
+
+00:57:47.040 --> 00:57:52.160
+fill out surveys, please reach out to me, reach out to us, let us know your feedback and what
+
+
+00:57:52.160 --> 00:57:55.920
+what pain points that you have or what like feature quests that you have because we really do
+
+
+00:57:55.920 --> 00:57:58.800
+do want to be helping you thrive on GitHub.
+
+
+00:57:58.800 --> 00:58:00.120
+- Yeah, that's brilliant.
+
+
+00:58:00.120 --> 00:58:02.040
+I'm super excited to see what's coming out
+
+
+00:58:02.040 --> 00:58:04.360
+like now I'm even more excited.
+
+
+00:58:04.360 --> 00:58:06.040
+- I'm gonna say, so the survey itself,
+
+
+00:58:06.040 --> 00:58:08.600
+I did ask Grace a little bit about what they found there.
+
+
+00:58:08.600 --> 00:58:10.680
+And like we've been talking about,
+
+
+00:58:10.680 --> 00:58:12.040
+they found that a lot of maintainers
+
+
+00:58:12.040 --> 00:58:14.400
+are doing this in their spare time
+
+
+00:58:14.400 --> 00:58:17.960
+'cause we surveyed the top 1000,
+
+
+00:58:17.960 --> 00:58:20.680
+so maintainers for the top 1000 open source projects,
+
+
+00:58:20.680 --> 00:58:22.320
+using the same rank that we did
+
+
+00:58:22.320 --> 00:58:24.480
+for the top maintainers that I mentioned before,
+
+
+00:58:24.480 --> 00:58:27.720
+but also contributors and users.
+
+
+00:58:27.720 --> 00:58:29.280
+And so many of these maintainers
+
+
+00:58:29.280 --> 00:58:30.720
+who are just doing this in their spare time
+
+
+00:58:30.720 --> 00:58:34.280
+and really community building was quite a low priority
+
+
+00:58:34.280 --> 00:58:36.840
+for them just 'cause they're just trying to survive
+
+
+00:58:36.840 --> 00:58:37.840
+as an open-source project
+
+
+00:58:37.840 --> 00:58:40.960
+or they're just trying to grow the project in the first place.
+
+
+00:58:40.960 --> 00:58:45.320
+So the survey responses will help us prioritize
+
+
+00:58:45.320 --> 00:58:47.160
+making discussions more useful,
+
+
+00:58:47.160 --> 00:58:48.760
+especially for Q&A type questions.
+
+
+00:58:48.760 --> 00:58:51.280
+We found that was really helpful.
+
+
+00:58:51.280 --> 00:58:53.200
+And we wanna learn how to incentivize
+
+
+00:58:53.200 --> 00:58:56.400
+can you to help each other out. Big feedback we heard was like,
+
+
+00:58:56.400 --> 00:58:59.440
+maintainers felt like they were the ones answering all of the stuff on
+
+
+00:58:59.440 --> 00:59:03.600
+discussions. So that's really with the research found. So I think we'll be
+
+
+00:59:03.600 --> 00:59:05.920
+able to see some work in that area soon.
+
+
+00:59:05.920 --> 00:59:11.360
+Yeah, it's super exciting. I'm really glad to hear that. Because I do
+
+
+00:59:11.360 --> 00:59:16.120
+think there is definitely a opportunity to forget up there. Where
+
+
+00:59:16.120 --> 00:59:19.480
+there is definitely a need and the fact that you all are thinking about it
+
+
+00:59:19.480 --> 00:59:27.720
+wonderful. So in closing, this was a wonderful conversation and I'm excited about all the things
+
+
+00:59:27.720 --> 00:59:34.760
+to get up to doing and the things that's coming down the pipeline. I'd like to hear from each of you.
+
+
+00:59:34.760 --> 00:59:45.480
+What are your hopes for open source and open source communities and the role open source can play
+
+
+00:59:45.480 --> 00:59:52.760
+in bettering our world. Before I answer that, can I answer your other question that I heard
+
+
+00:59:52.760 --> 00:59:58.680
+when I could hear you but could it have to be off? You're asking about like task lists and roadmaps
+
+
+00:59:58.680 --> 01:00:05.880
+and stuff? Yeah, I just was like people are so excited about that. The task list feature.
+
+
+01:00:05.880 --> 01:00:11.640
+That's the first time a maintainer asked me if they can turn it on their org before I even knew
+
+
+01:00:11.640 --> 01:00:16.120
+what it was. So the day it was staff shipped, so it was available for me as staff, but I hadn't
+
+
+01:00:16.120 --> 01:00:21.400
+opened an issue yet. I got a message from CNC app. They were like, "Oh, can you turn this on for us?"
+
+
+01:00:21.400 --> 01:00:24.600
+I'm like, "What are they talking about?" And it wasn't until I actually opened an issue and I
+
+
+01:00:24.600 --> 01:00:27.880
+saw it. I was like, "Oh, this is what they want." They found out so fast and they were so excited
+
+
+01:00:27.880 --> 01:00:34.520
+about it. So I agree with you, like, these tools that can help you actually manage your project
+
+
+01:00:34.520 --> 01:00:39.720
+and do the work without leaving the GitHub platform. I think it's so valuable for a maintainer's.
+
+
+01:00:40.360 --> 01:00:42.360
+and it's really exciting to see that come through.
+
+
+01:00:42.360 --> 01:00:46.680
+So coming up, I know a big thing for open source that I'm excited about.
+
+
+01:00:46.680 --> 01:00:50.360
+They're going to be really seeing a secret scanning for public repositories.
+
+
+01:00:50.360 --> 01:00:53.000
+So that's launching December 13th.
+
+
+01:00:53.000 --> 01:00:56.680
+So by the time this podcast comes out, it should be there.
+
+
+01:00:56.680 --> 01:00:59.880
+But right now, secret scanning is only available for,
+
+
+01:00:59.880 --> 01:01:03.320
+I could have advanced security, which is like an add-on for enterprise.
+
+
+01:01:03.320 --> 01:01:06.040
+But now on all public repositories,
+
+
+01:01:07.160 --> 01:01:12.520
+you'll get notifications if like secrets are accidentally committed to your code. So I think
+
+
+01:01:12.520 --> 01:01:16.200
+this will be huge for open source and just making sure that we're keeping open source secure
+
+
+01:01:16.200 --> 01:01:20.440
+because I know security has been a huge topic the last few years especially. So that's what I'm
+
+
+01:01:20.440 --> 01:01:25.000
+kind of excited about product-wise. And now I can answer your other question, Skulk.
+
+
+01:01:25.000 --> 01:01:30.360
+Yeah, and I think it's a big question that you have and sort of what are my hopes for the open
+
+
+01:01:30.360 --> 01:01:37.560
+source ecosystem. I think I want to keep seeing maintainers supported and I do want to see
+
+
+01:01:37.560 --> 01:01:42.440
+your average maintainer supported. I think we're doing a great job with with the most visible people
+
+
+01:01:42.440 --> 01:01:46.440
+and there already are structures in place for them to get like the grant funding and like the
+
+
+01:01:46.440 --> 01:01:52.520
+the sponsor's funding, but I would like to see more from your average maintainer who maybe is a
+
+
+01:01:52.520 --> 01:01:57.080
+little bit less visible maybe they're not creating the flashy content or streaming. It's just a
+
+
+01:01:57.080 --> 01:01:59.520
+a little bit harder for them to get the attention.
+
+
+01:01:59.520 --> 01:02:01.960
+So I do want to create spaces for that group
+
+
+01:02:01.960 --> 01:02:04.440
+to get the support they need both financially
+
+
+01:02:04.440 --> 01:02:05.560
+but also just from each other.
+
+
+01:02:05.560 --> 01:02:08.760
+It is really lonely maintaining a community.
+
+
+01:02:08.760 --> 01:02:11.360
+You don't often, you don't have a ton of peers
+
+
+01:02:11.360 --> 01:02:12.440
+that you can turn to.
+
+
+01:02:12.440 --> 01:02:14.560
+So even just creating a space where people can talk
+
+
+01:02:14.560 --> 01:02:17.080
+to each other, this is a lot of what I'm thinking about now.
+
+
+01:02:17.080 --> 01:02:19.320
+I'm thinking about how can we curate this kind of community
+
+
+01:02:19.320 --> 01:02:21.360
+for maintainers to learn from each other
+
+
+01:02:21.360 --> 01:02:23.880
+so that the whole community can just level up
+
+
+01:02:23.880 --> 01:02:25.960
+and you can have better open source.
+
+
+01:02:25.960 --> 01:02:28.220
+I couldn't agree more with, yeah, I mean,
+
+
+01:02:28.220 --> 01:02:30.000
+I can't agree more with Adi.
+
+
+01:02:30.000 --> 01:02:32.000
+You know, as I said at the start,
+
+
+01:02:32.000 --> 01:02:33.320
+we want open source drive.
+
+
+01:02:33.320 --> 01:02:35.400
+And this is not something that we,
+
+
+01:02:35.400 --> 01:02:37.400
+you know, are thinking about on a one or a two
+
+
+01:02:37.400 --> 01:02:38.400
+or a four year scale.
+
+
+01:02:38.400 --> 01:02:40.040
+It's on a decade level scale
+
+
+01:02:40.040 --> 01:02:42.640
+because our whole world runs an open source.
+
+
+01:02:42.640 --> 01:02:43.840
+It doesn't matter if you're a tech company
+
+
+01:02:43.840 --> 01:02:44.680
+or any company.
+
+
+01:02:44.680 --> 01:02:47.280
+I mean, you look at the light bulbs in your room,
+
+
+01:02:47.280 --> 01:02:48.680
+the car that you drive,
+
+
+01:02:48.680 --> 01:02:50.760
+the software that you use on your computer every day,
+
+
+01:02:50.760 --> 01:02:52.280
+all of it depends on open source.
+
+
+01:02:52.280 --> 01:02:55.200
+And it is really our responsibility.
+
+
+01:02:55.200 --> 01:02:58.960
+And our interest is a community of developers
+
+
+01:02:58.960 --> 01:03:01.240
+to make sure that it can support itself
+
+
+01:03:01.240 --> 01:03:04.560
+and have the right community members and connections
+
+
+01:03:04.560 --> 01:03:07.680
+so that people continue to contribute open source
+
+
+01:03:07.680 --> 01:03:10.240
+instead of, again, going back into their close silos
+
+
+01:03:10.240 --> 01:03:13.080
+and starting to do the same work that everyone else is doing.
+
+
+01:03:13.080 --> 01:03:15.880
+And I think, as we've seen over the last decade,
+
+
+01:03:15.880 --> 01:03:17.120
+like open sources really want,
+
+
+01:03:17.120 --> 01:03:19.560
+it's the model that just makes sense
+
+
+01:03:19.560 --> 01:03:21.480
+and will continue to do a better job
+
+
+01:03:21.480 --> 01:03:23.280
+than people working alone.
+
+
+01:03:23.280 --> 01:03:29.960
+And so to the extent that we can give maintainers the tools that they need to manage their community or run their software and
+
+
+01:03:29.960 --> 01:03:33.200
+the support they need financially and
+
+
+01:03:33.200 --> 01:03:36.000
+I want to say like mentally or or
+
+
+01:03:36.000 --> 01:03:39.740
+as psychologically, spiritually whatever it is so that people
+
+
+01:03:39.740 --> 01:03:46.080
+Really feel welcome in the community and know that they can build their careers and their companies for the long term. So
+
+
+01:03:46.080 --> 01:03:52.080
+Hopefully we're making some steps towards that and I know we got a lot more work to do and we just need to continue forward.
+
+
+01:03:52.480 --> 01:04:04.440
+Yeah, that's all great. I love that love it. Yeah, no for me as well. I see open source playing a key role in in how we work how we work together and what we make
+
+
+01:04:04.440 --> 01:04:13.960
+And I think I think there's there's a lot of promise and I think there's a lot of opportunities for people in places like Africa, India
+
+
+01:04:13.960 --> 01:04:17.880
+The all these developing nations. I think there's a lot of
+
+
+01:04:19.080 --> 01:04:28.080
+By enabling people to make things, I think it'll naturally be a positive impact on communities.
+
+
+01:04:28.080 --> 01:04:36.080
+And when communities get healthy, it rolls over.
+
+
+01:04:36.080 --> 01:04:42.080
+And eventually it flows into the country as a whole and countries and then the globe as a whole.
+
+
+01:04:42.080 --> 01:04:44.080
+So I think this is a wonderful thing.
+
+
+01:04:44.080 --> 01:04:48.280
+I've been in open source for so long that I can't even imagine myself working or doing
+
+
+01:04:48.280 --> 01:04:50.400
+anything else.
+
+
+01:04:50.400 --> 01:04:54.200
+So I want to again thank both of you for joining me.
+
+
+01:04:54.200 --> 01:04:56.360
+I really, really appreciate this.
+
+
+01:04:56.360 --> 01:05:01.480
+It means a lot to me that GitHub is so open to speaking with the community, which you've
+
+
+01:05:01.480 --> 01:05:03.680
+proven again today.
+
+
+01:05:03.680 --> 01:05:08.200
+And so thanks for anything you do and keep doing it.
+
+
+01:05:08.200 --> 01:05:11.440
+The open source, the whole open source community is behind you.
+
+
+01:05:11.440 --> 01:05:12.440
+So thanks very much.
+
+
+01:05:12.440 --> 01:05:16.440
+Thank you for listening to the Mechanical Inc podcast.
+
+
+01:05:16.440 --> 01:05:20.440
+Join the conversation on Discord. All the links are in the show notes.
+
+
+01:05:20.440 --> 01:05:24.440
+If you enjoyed this episode, please like and share with your friends and colleagues.
+
+
+01:05:24.440 --> 01:05:28.440
+If you have a moment, please leave a review for us on our podcasts.
+
+
+01:05:28.440 --> 01:05:34.440
+As this helps others find us and helps us make a better podcast for you.
+
+
+01:05:34.440 --> 01:05:36.440
+Our listeners.
+
+
+01:05:36.440 --> 01:05:45.440
+[Music]
+
